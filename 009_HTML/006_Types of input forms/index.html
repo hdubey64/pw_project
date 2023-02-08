@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Input Attributes</title>
+   </head>
+   <body>
+      <!-- <form method="get">
+         <fieldset>
+            <legend>User Ragistration!!!</legend>
+            <label for="username ">Please Enter your Name:</label>
+            <input type="text" id="username" name="name" />
+            <br />
+            <label for="useremail ">Please Enter your email:</label>
+            <input type="email" id="username" name="email" />
+            <br />
+            <label for="userpassword ">Please Enter your password:</label>
+            <input type="password" id="userpassword" name="password" />
+            <br />
+            Gender
+            <br />
+            <label for="male ">Male</label>
+            <input type="radio" id="male" name="Usergender" value="male" />
+            <br />
+            <label for="female ">female</label>
+            <input type="radio" id="female" name="Usergender" value="female" />
+            <br />
+            <label for="Transgender">Male</label>
+            <input
+               type="radio"
+               id="Transgender"
+               name="Usergender"
+               value="Transgender"
+            />
+            <br />
+            <input type="submit" value="Submit Form" />
+         </fieldset> -->
+      <form method="post" target="_blank" action="/signup">
+         <fieldset>
+            <legend>User Ragistration!!!</legend>
+            <label for="username ">Please Enter your Name:</label>
+            <input
+               type="text"
+               id="username"
+               name="name"
+               value="john"
+               readonly
+               disabled
+            />
+            <br />
+            <label for="useremail ">Please Enter your email:</label>
+            <input
+               type="email"
+               id="username"
+               name="email"
+               placeholder="a@example.com"
+               autofocus
+            />
+            <br />
+            <label for="userpassword ">Please Enter your password:</label>
+            <input type="password" id="userpassword" name="password" />
+            <br />
+            Gender
+            <br />
+            <label for="male ">Male</label>
+            <input type="radio" id="male" name="Usergender" value="male" />
+            <br />
+            <label for="female ">female</label>
+            <input type="radio" id="female" name="Usergender" value="female" />
+            <br />
+            <label for="Transgender">Male</label>
+            <input
+               type="radio"
+               id="Transgender"
+               name="Usergender"
+               value="Transgender"
+            />
+            <br />
+            <label for="Transgender">Number</label>
+            <input type="number" min="0" max="9999999999" />
+            <br />
+            <input type="submit" value="Submit Form" />
+         </fieldset>
+      </form>
+   </body>
+</html>
