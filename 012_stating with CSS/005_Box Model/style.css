@@ -1,0 +1,19 @@
+body {
+   background-color: #333;
+
+   font-family: "Pacifico", cursive;
+}
+
+h1 {
+   color: white;
+   font-size: 62px;
+   text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.5em rgb(247, 5, 154);
+}
+div {
+   color: white;
+   padding: 10px 2px;
+   border: 2px solid cyan;
+   margin: 10px 20px;
+   text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.5em rgb(247, 5, 154);
+   box-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.5em rgb(247, 5, 154);
+}
