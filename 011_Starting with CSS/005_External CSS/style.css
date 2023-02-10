@@ -1,0 +1,17 @@
+body {
+   background-color: #333;
+}
+.heading {
+   color: white;
+   font-size: 42px;
+   text-align: center;
+   text-decoration: underline;
+   border: 5px dotted cyan;
+}
+.para {
+   color: cyan;
+   font-size: 20px;
+   text-align: justify;
+   text-decoration: solid;
+   border: 5px dotted white;
+}
