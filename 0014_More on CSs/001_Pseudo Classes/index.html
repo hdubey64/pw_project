@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pseudo Element</title>
+      <style>
+         /* p:hover {
+            background-color: #333;
+            color: cyan;
+         } */
+         /* input:focus {
+            background-color: red;
+            color: green;
+            font-size: 25px;
+         } */
+         /* a:hover {
+            color: burlywood;
+         }
+         a:active {
+            color: rgb(219, 16, 142);
+         } */
+         /* a:visited {
+            color: rgb(81, 255, 0);
+         } */
+         a:nth-child(2n + 1) {
+            background-color: brown;
+         }
+         .hover::first-line {
+            color: green;
+         }
+         .hover-1::after {
+            content: "Vishal Dubey";
+            color: aqua;
+         }
+         .hover::selection {
+            background-color: darkmagenta;
+            color: aqua;
+         }
+      </style>
+   </head>
+   <body>
+      <p class="hover-1">
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio,
+         aut. Ratione dolores corrupti veniam dicta, rerum cum nesciunt?
+         Provident porro excepturi esse, numquam eos nemo! Lorem ipsum dolor,
+         sit amet consectetur adipisicing elit. Perspiciatis unde officia
+         aperiam eius. Ipsum qui minima, saepe totam similique, ex, cum est aut
+         voluptatem architecto nobis laudantium enim reiciendis iusto?
+      </p>
+      <p class="hover">
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio,
+         aut. Ratione dolores corrupti veniam dicta, rerum cum nesciunt?
+         Provident porro excepturi esse, numquam eos nemo!
+      </p>
+      <input type="text" class="focus" />
+      <hr />
+      <div>
+         <a
+            href="https://learn.pwskills.com/lesson/Pseudo-Classes/63d3b8350e5fcb4c028515ff/course/Full-Stack-web-development/63a2ecf58899439c8d7ebdc6"
+            class="hover visited active"
+            >Google</a
+         >
+         <a
+            href="https://learn.pwskills.com/lesson/Pseudo-Classes/63d3b8350e5fcb4c028515ff/course/Full-Stack-web-development/63a2ecf58899439c8d7ebdc6"
+            class="hover visited active"
+            >Google</a
+         >
+         <a
+            href="https://learn.pwskills.com/lesson/Pseudo-Classes/63d3b8350e5fcb4c028515ff/course/Full-Stack-web-development/63a2ecf58899439c8d7ebdc6"
+            class="hover visited active"
+            >Google</a
+         >
+         <a
+            href="https://learn.pwskills.com/lesson/Pseudo-Classes/63d3b8350e5fcb4c028515ff/course/Full-Stack-web-development/63a2ecf58899439c8d7ebdc6"
+            class="hover visited active"
+            >Google</a
+         >
+         <a
+            href="https://learn.pwskills.com/lesson/Pseudo-Classes/63d3b8350e5fcb4c028515ff/course/Full-Stack-web-development/63a2ecf58899439c8d7ebdc6"
+            class="hover visited active"
+            >Google</a
+         >
+         <a
+            href="https://learn.pwskills.com/lesson/Pseudo-Classes/63d3b8350e5fcb4c028515ff/course/Full-Stack-web-development/63a2ecf58899439c8d7ebdc6"
+            class="hover visited active"
+            >Google</a
+         >
+         <a
+            href="https://learn.pwskills.com/lesson/Pseudo-Classes/63d3b8350e5fcb4c028515ff/course/Full-Stack-web-development/63a2ecf58899439c8d7ebdc6"
+            class="hover visited active"
+            >Google</a
+         >
+         <a
+            href="https://learn.pwskills.com/lesson/Pseudo-Classes/63d3b8350e5fcb4c028515ff/course/Full-Stack-web-development/63a2ecf58899439c8d7ebdc6"
+            class="hover visited active"
+            >Google</a
+         >
+      </div>
+   </body>
+</html>
