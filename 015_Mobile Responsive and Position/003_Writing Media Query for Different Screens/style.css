@@ -1,0 +1,71 @@
+div {
+   text-align: center;
+   background-color: black;
+   color: aqua;
+   font-size: 56px;
+}
+
+@media (max-width: 600px) {
+   body {
+      background-color: red;
+   }
+   div::after {
+      content: "This is Mobile Campaticle";
+   }
+}
+@media (min-width: 600px) {
+   /*600px - 768px*/
+   /* For Portiat tabler And Big Phones */
+   body {
+      background-color: rgb(187, 255, 0);
+   }
+   div::after {
+      content: "For Portiat tabler And Big Phones";
+   }
+   div {
+      background-color: rgb(92, 244, 255);
+      color: rgb(24, 141, 0);
+   }
+}
+@media (min-width: 768px) {
+   /*768px - 992px*/
+   /* For Portiat tabler And Big Phones */
+   body {
+      background-color: rgb(0, 225, 255);
+   }
+   div::after {
+      content: "Tablet";
+   }
+   div {
+      background-color: rgb(255, 230, 0);
+      color: rgb(111, 255, 55);
+   }
+}
+@media (min-width: 992px) {
+   /*992px - 1199px*/
+   /* For Portiat tabler And Big Phones */
+   body {
+      background-color: rgb(187, 255, 0);
+   }
+   div::after {
+      content: "Laptop";
+   }
+   div {
+      background-color: rgb(92, 244, 255);
+      color: rgb(24, 141, 0);
+   }
+}
+@media (min-width: 1200px) {
+   /*992px - 1199px*/
+   /* For Portiat tabler And Big Phones */
+   body {
+      background-color: rgb(247, 25, 255);
+   }
+   div::after {
+      content: "Larger Screen";
+   }
+   div {
+      background-color: rgb(0, 119, 255);
+      color: rgb(255, 60, 213);
+   }
+}
