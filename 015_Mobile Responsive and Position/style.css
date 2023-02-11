@@ -1,0 +1,58 @@
+body {
+   background-color: cyan;
+}
+div {
+   font-size: 52px;
+   text-align: center;
+   color: #303030;
+}
+
+div::after {
+   content: " Welcome to demo";
+}
+@media (max-width: 400px) {
+   body {
+      background-color: #bbfffc;
+   }
+   div::after {
+      content: "Very Small";
+   }
+   div {
+      color: rgb(0, 255, 76);
+   }
+}
+/* @media (min-width: 400px) and (max-width: 768px) { */
+@media (400px <= width <= 768px) {
+   body {
+      background-color: #ff5e00;
+   }
+   div::after {
+      content: "Mid Range Devices";
+   }
+   div {
+      color: rgb(146, 29, 255);
+   }
+}
+@media (min-width: 768px) {
+   body {
+      background-color: #303030;
+   }
+   div::after {
+      content: "It's Working";
+   }
+   div {
+      color: blueviolet;
+   }
+}
+
+@media (min-width: 900px) {
+   body {
+      background-color: blueviolet;
+   }
+   div::after {
+      content: "It's Working";
+   }
+   div {
+      color: cyan;
+   }
+}
