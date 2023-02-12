@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>OverFlow and Z-index</title>
+      <style>
+         p {
+            width: 250px;
+            height: 250px;
+            border: 1px solid red;
+            /* overflow: hidden; */
+            overflow: auto;
+            /* overflow: scroll; */
+         }
+         .one {
+            width: 150px;
+            height: 150px;
+            background-color: blueviolet;
+            border: 1px solid black;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+         }
+         .two {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            border: 1px solid black;
+            position: absolute;
+            top: 0;
+            z-index: -2;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- OverFlow -->
+      <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. In, non odit
+         architecto quis repudiandae rem dicta voluptatem. At, ducimus excepturi
+         eveniet itaque illum repellat! Placeat accusantium quidem dolores cum
+         possimus saepe? Beatae saepe provident mollitia, deserunt vero vitae
+         quas iste fuga ullam harum ea aliquid corrupti? Tempora nulla
+         asperiores labore fugiat vel ratione minima atque? Inventore delectus
+         harum necessitatibus ea pariatur iure aliquid officia et dolor! Maiores
+         asperiores distinctio repudiandae in iure voluptas tempore culpa libero
+         quia iste quo eius quaerat ex dolor ducimus debitis numquam dolore amet
+         soluta, illum natus magnam consectetur modi reiciendis. Ab
+         exercitationem repellat quis animi maiores. Nesciunt eos sit ullam
+         magnam perspiciatis excepturi laborum ipsa earum harum quae inventore
+         cumque minima adipisci ab quia, voluptatem sed eius quaerat nam,
+         facere, in repudiandae. Aperiam fugit reprehenderit adipisci tenetur
+         tempora deserunt, temporibus provident nesciunt. Dolor iusto facere
+         deleniti ut quidem repudiandae earum, nihil quis laboriosam beatae ea
+         sed recusandae quas aperiam consequuntur impedit, dignissimos, id atque
+         ipsum enim! Quas rerum reprehenderit est numquam sit deserunt quibusdam
+         facilis earum, quia odio fuga illum tenetur? Sed voluptate fugiat
+         labore et eius adipisci voluptatum rem ut nisi architecto a, officiis
+         officia porro non molestias, quidem praesentium maxime soluta harum
+         repudiandae dolore! Eligendi magnam soluta ut quos dolore enim
+         voluptatum inventore provident ipsam quae neque modi, iste officiis
+         molestiae hic necessitatibus eum. Reprehenderit illo dolor similique.
+         Iure veritatis perspiciatis maiores rem, architecto vitae itaque culpa,
+         numquam ab provident beatae quas quasi doloremque veniam dolorem eaque,
+         eius iusto facere soluta dignissimos nam commodi tempora neque! Eaque
+         ipsum dolores aliquid, a nam porro ut mollitia harum deserunt error
+         consectetur veritatis amet est obcaecati aut quibusdam inventore
+         nesciunt dignissimos iste. Corporis dolor minima voluptatibus incidunt?
+         Animi perferendis error reiciendis nemo eos, odio sapiente possimus
+         aspernatur quaerat, nihil maxime nam, obcaecati tempora labore culpa
+         incidunt debitis consectetur velit illum id. Vel molestiae accusamus
+         animi rerum debitis numquam possimus non adipisci. Repellat deserunt
+         obcaecati et rerum, molestiae, culpa pariatur quo non, quasi tempora
+         repudiandae neque dolorum iste minima corrupti? Illum nostrum mollitia
+         nesciunt cum est ratione, nulla voluptate aspernatur natus explicabo,
+         obcaecati nam, eius aut? Molestiae voluptatem doloribus velit facilis
+         distinctio dolores beatae, libero quidem eos tempore, incidunt ex,
+         error sequi. Ratione laboriosam tempore laudantium aperiam velit. Nobis
+         voluptatibus dicta reiciendis dolor, cupiditate veniam dignissimos ex
+         excepturi fuga, consequatur veritatis? Quaerat magni nam veritatis
+         voluptates dolorem numquam maiores modi deleniti ullam omnis libero
+         animi, facilis eveniet enim expedita inventore! Deserunt reprehenderit
+         enim consequatur vel? Iure, totam! Placeat necessitatibus eligendi,
+         molestiae aspernatur deleniti dolorum vitae illo ad pariatur, ut libero
+         accusantium corrupti, debitis quis similique et rerum ipsa laborum in
+         quia! Odit, fuga consequuntur! Recusandae, modi laboriosam ut porro
+         magni sint nisi a obcaecati autem maxime at architecto, odit minus
+         perferendis alias. Porro numquam optio consequatur, reiciendis id
+         adipisci aperiam in consequuntur quia illo praesentium eveniet saepe
+         dolores iure voluptatum ipsum eos unde atque odio? Dolorem aliquid
+         impedit deleniti beatae. Odio maiores nihil nostrum quis reiciendis,
+         amet et omnis deleniti sunt, praesentium facere, alias ratione laborum
+         dolorum.
+      </p>
+      <!-- z-index -->
+      <div class="one"></div>
+      <div class="two"></div>
+      <div
+         style="
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+         "
+      ></div>
+      <div
+         style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+         "
+      >
+         <button>Click me</button>
+         <ul style="position: absolute; top: 100%; left: 0; z-index: 2">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+         </ul>
+      </div>
+   </body>
+</html>
