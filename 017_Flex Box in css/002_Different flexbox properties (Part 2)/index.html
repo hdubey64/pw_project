@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>FlexBox Properties</title>
+      <style>
+         .cont {
+            height: 200px;
+            display: flex;
+
+            /* display: inline-flex; */
+            border: 1px Solid black;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            /* flex-flow: ; */
+            /* justify-content: center; */
+            gap: 20px;
+            /* row-gap: 20px; */
+            /* column-gap: 50px;
+            flex-flow: row wrap;
+            */
+            flex-basis: 400px;
+         }
+
+         /* .box {
+            width: 500px;
+            height: 100px;
+         } */
+         .box1 {
+            background-color: red;
+            /* order: 3;
+            flex-grow: 2; */
+         }
+         .box2 {
+            background-color: blueviolet;
+            /* order: 1;
+            flex-grow: 4; */
+            /* flex-shrink: 2; */
+            /* align-self: flex-end; */
+         }
+         .box3 {
+            background-color: yellow;
+            /* order: 2;
+            flex-grow: 6; */
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Flex -->
+      <div class="cont">
+         <div class="box box1">Box1</div>
+         <div class="box box2">Box2</div>
+         <div class="box box3">Box3</div>
+      </div>
+   </body>
+</html>
