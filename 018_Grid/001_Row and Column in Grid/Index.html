@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Grid</title>
+      <style>
+         body {
+            background-color: #ffb7e9;
+         }
+         .container {
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-columns: minmax(10px, 2fr) minmax(10px, 2fr) minmax(
+                  10px,
+                  2fr
+               ); */
+            grid-template-columns: 1fr 1f;
+            grid-template-rows: 50px 100px 75px 125px;
+
+            border: 1px solid black;
+         }
+         .container div:nth-child(n + 1) {
+            background-color: #2cf8ff;
+         }
+         .container div:nth-child(2n + 1) {
+            background-color: #79ff2c;
+         }
+         .box {
+            /* height: 100px;
+            width: 100px; */
+            font-size: 42px;
+            color: white;
+            margin: 5px;
+            text-align: center;
+         }
+         .box1 {
+            background-color: red;
+            /* align-self: flex-start;
+            justify-self: flex-start; */
+         }
+         .box2 {
+            background-color: rgb(0, 217, 255);
+            /* align-self: center;
+            justify-self: center; */
+         }
+         .box3 {
+            background-color: rgb(0, 255, 85);
+            /* align-self: flex-end; */
+            /* justify-self: flex-end; */
+         }
+         .box4 {
+            background-color: rgb(255, 0, 140);
+            /* align-self: flex-end; */
+            /* justify-self: flex-end; */
+         }
+         .box5 {
+            background-color: rgb(89, 175, 255);
+            /* align-self: flex-end; */
+            /* justify-self: flex-end; */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+         }
+
+         .box6 {
+            background-color: rgb(220, 255, 93);
+            /* align-self: flex-end; */
+            /* justify-self: flex-end; */
+         }
+         .box7 {
+            background-color: rgb(255, 141, 66);
+            /* align-self: flex-end; */
+            /* justify-self: flex-end; */
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+         }
+         .containerOne {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 500px;
+         }
+         .Article {
+            display: grid;
+            grid-template-columns: 1fr;
+         }
+         .image {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+         }
+         .box19 {
+            /* grid-column-start: 4;
+            grid-column-end: 8; */
+            grid-row-start: 12;
+            grid-row-end: 18;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Grid System -->
+
+      <div class="box box1">Header</div>
+
+      <div class="containerOne">
+         <div class="box box2">Aside</div>
+         <div class="Article">
+            <div class="box">Article</div>
+            <div class="image">
+               <div class="box box3">Image</div>
+               <div class="box box3">Image</div>
+               <div class="box box3">Image</div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box box4">Footer</div>
+      <div class="container">
+         <div class="box box5">5</div>
+         <div class="box box6">6</div>
+         <div class="box box7">7</div>
+         <div class="box box8">8</div>
+         <div class="box box9">9</div>
+         <div class="box box10">10</div>
+         <div class="box box11">11</div>
+         <div class="box box12">12</div>
+         <div class="box box13">13</div>
+         <div class="box box14">14</div>
+         <div class="box box15">15</div>
+         <div class="box box14">16</div>
+         <div class="box box17">17</div>
+         <div class="box box18">18</div>
+         <div class="box box19">19</div>
+         <div class="box box20">20</div>
+         <div class="box box21">21</div>
+         <div class="box box22">22</div>
+         <div class="box box23">23</div>
+         <div class="box box24">24</div>
+         <div class="box box25">25</div>
+         <div class="box box26">26</div>
+         <div class="box box24">27</div>
+         <div class="box box28">28</div>
+         <div class="box box29">29</div>
+         <div class="box box30">30</div>
+         <div class="box box31">31</div>
+         <div class="box box32">32</div>
+         <div class="box box33">33</div>
+         <div class="box box34">34</div>
+      </div>
+   </body>
+</html>
