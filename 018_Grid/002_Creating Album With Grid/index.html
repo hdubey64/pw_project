@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Album with Grid</title>
+      <style>
+         .container {
+            display: grid;
+            height: 600px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 210px);
+         }
+         .box {
+            /* height: 100px;
+            width: 100px; */
+            display: flex;
+            font-size: 42px;
+            color: white;
+            align-items: center;
+            justify-content: center;
+         }
+         .box1 {
+            background-color: red;
+            grid-row-start: 1;
+            grid-row-end: 3;
+         }
+         .box2 {
+            background-color: rgb(255, 187, 0);
+         }
+         .box3 {
+            background-color: rgb(145, 255, 0);
+         }
+         .box4 {
+            background-color: rgb(0, 255, 170);
+         }
+         .box5 {
+            background-color: rgb(35, 255, 65);
+            grid-column-start: 2;
+            grid-column-end: 5;
+         }
+         .box6 {
+            background-color: rgb(60, 25, 185);
+         }
+         .box7 {
+            background-color: rgb(255, 0, 98);
+         }
+         .box8 {
+            background-color: rgb(34, 122, 255);
+         }
+         .box9 {
+            background-color: rgb(75, 0, 0);
+         }
+         .box10 {
+            background-color: rgb(255, 188, 188);
+         }
+         .box11 {
+            background-color: rgb(6, 2, 255);
+         }
+         .box12 {
+            background-color: rgb(0, 255, 21);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="box box1">One</div>
+         <div class="box box2">Two</div>
+         <div class="box box3">Three</div>
+         <div class="box box4">Four</div>
+         <div class="box box5">Five</div>
+         <div class="box box6">Six</div>
+         <div class="box box7">Seven</div>
+         <div class="box box8">Eight</div>
+         <div class="box box9">Nine</div>
+         <div class="box box10">Ten</div>
+         <div class="box box11">Eleven</div>
+         <div class="box box12">Twelve</div>
+      </div>
+   </body>
+</html>
