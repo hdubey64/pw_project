@@ -1,0 +1,137 @@
+:root {
+   --pinkColor: #ff515f;
+   --yellowColor: #ffc233;
+   --whiteColor: #ffffff;
+}
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+/*body {
+    background-image: url(../assets/pexels-maxyne-barcel-10402282\ 1.png);
+   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+   object-fit: cover;
+   background-size: cover;
+   background-position: 50% 10%;
+   background-repeat: no-repeat;
+   background-attachment: fixed; 
+}
+*/
+body {
+   background: url("../assets/pexels-maxyne-barcel-10402282\ 1.png");
+   position: relative;
+   font-family: "Dela Gothic One", cursive;
+   background-position: 50% 10%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   object-fit: fill;
+}
+
+.layer {
+   background-color: rgba(0, 0, 0, 0.65);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   z-index: -1;
+}
+nav {
+   padding: 2% 10%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.logo img {
+   width: 100px;
+}
+nav ul {
+   display: flex;
+
+   width: 50%;
+
+   align-items: center;
+   justify-content: space-between;
+}
+nav ul li {
+   list-style: none;
+}
+nav ul li a {
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 18px;
+   color: var(--yellowColor);
+   font-family: "Red Rose";
+}
+nav ul li a:hover {
+   color: var(--pinkColor);
+   /* background-color: var(--whiteColor); */
+   padding: 2px 25px;
+   text-decoration: underline overline var(--yellowColor);
+}
+
+nav button {
+   padding: 25% 80%;
+   font-size: 16px;
+   font-weight: 700;
+   background-color: var(--pinkColor);
+   border: none;
+   color: var(--whiteColor);
+   cursor: pointer;
+}
+nav button:hover {
+   background-color: var(--whiteColor);
+   color: var(--pinkColor);
+   border-radius: 10px 0 10px 0;
+}
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+main h1 {
+   font-size: 5rem;
+   text-align: center;
+   font-weight: 200;
+   line-height: 90px;
+   margin-top: 45px;
+   color: var(--yellowColor);
+}
+.mainBtn {
+   width: 30%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 20px;
+}
+.mainBtn button {
+   padding: 4% 12%;
+   font-size: 1.5rem;
+   font-weight: 700;
+   background-color: var(--pinkColor);
+   border: none;
+   color: var(--whiteColor);
+   cursor: pointer;
+   margin-top: 25px;
+}
+.mainBtn button:hover {
+   padding: 4% 12%;
+   font-size: 1.5rem;
+   font-weight: 700;
+   background-color: var(--whiteColor);
+   border: none;
+   color: var(--pinkColor);
+   cursor: pointer;
+   margin-top: 25px;
+   border-radius: 20px 0 20px 0;
+}
+footer {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding: 0 3%;
+}
+footer img {
+   width: 150px;
+}
