@@ -1,0 +1,96 @@
+:root {
+   --greenColor: #c8f296;
+   --yellowColor: #fffcac;
+   --darkGreenColor: #3b855b;
+   --whiteColor: rgb(255, 255, 255);
+}
+* {
+   margin: 0;
+   padding: 0;
+   /* overflow: hidden; */
+   box-sizing: border-box;
+}
+body {
+   font-family: "Poppins", sans-serif;
+   background: linear-gradient(
+      90deg,
+      var(--yellowColor),
+      var(--yellowColor),
+      var(--greenColor)
+   );
+}
+nav {
+   padding: 20px 10%;
+   height: 15vh;
+}
+nav ul {
+   display: flex;
+   align-items: center;
+}
+
+nav ul li {
+   list-style: none;
+   margin-right: 7%;
+   font-weight: 700;
+}
+nav ul li img {
+   width: 100px;
+}
+nav ul li a {
+   text-decoration: none;
+   font-size: 18px;
+   color: black;
+}
+nav ul li a:hover {
+   color: var(--darkGreenColor);
+}
+/* nav ul li a:hover::after {
+   content: "Blog";
+   font-size: 20px;
+   color: var(--darkGreenColor);
+} */
+
+.heroSection {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.heroSectionLeft {
+   width: 40%;
+}
+.heroSectionLeft h1 {
+   font-size: 60px;
+}
+
+.heroSectionLeft p {
+   margin: 5% 0;
+}
+.heroSectionLeft button {
+   padding: 15px 20px;
+   font-size: 18px;
+   color: var(--whiteColor);
+   font-weight: 600;
+   border: none;
+   background-color: var(--darkGreenColor);
+   border-radius: 10px;
+}
+.heroSectionLeft button:hover {
+   background-color: var(--whiteColor);
+   color: var(--darkGreenColor);
+}
+
+.heroSectionRight div img {
+   margin: 5px;
+   margin-bottom: 5px;
+}
+
+.heroSectionRightImages img {
+   width: 200px;
+}
+.heroSectionRightImages {
+   padding-left: 50px;
+}
+.heroSectionRight > img {
+   width: 475px;
+   padding-left: 50px;
+}
