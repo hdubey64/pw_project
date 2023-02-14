@@ -46,7 +46,7 @@ button:nth-child(1) {
    background-color: var(--greenColor);
    padding: 8px 15px;
    cursor: pointer;
-   color: var(--whiteColor);
+   color: var(--blueColor);
    border: 1px Solid var(--greenColor);
    border-radius: 5px;
    font-size: 16px;
