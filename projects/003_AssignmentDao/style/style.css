@@ -1,0 +1,139 @@
+:root {
+   --PurpleDeoColor: #b90ec5;
+   --whiteDeoColor: #ffffff;
+   --blackDeoColor: #000000;
+   --grayDeoColor: rgb(173, 173, 173);
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background-image: url(../assets/bg.png);
+   object-fit: cover;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: cover;
+   min-height: 100vh;
+   font-family: "Poppins", sans-serif;
+}
+header {
+   background-color: var(--blackDeoColor);
+   padding: 15px 7%;
+}
+nav {
+   display: grid;
+   grid-template-columns: 1fr 4fr 3fr;
+
+   align-items: center;
+   justify-content: center;
+}
+.logo {
+   border-right: 1px Solid var(--grayDeoColor);
+}
+.logo img {
+   width: 110px;
+}
+nav ul {
+   list-style: none;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+nav ul li a {
+   color: var(--whiteDeoColor);
+   text-decoration: none;
+   font-size: 16px;
+   font-weight: 500px;
+   position: relative;
+}
+
+a::before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 4px;
+   border-radius: 4px;
+   background-color: var(--PurpleDeoColor);
+   bottom: 0;
+   left: 0;
+   transform-origin: right;
+   transform: scaleX(0);
+   transition: transform 0.3s ease-in-out;
+}
+
+a:hover::before {
+   transform-origin: left;
+   transform: scaleX(1);
+}
+
+.navBtns {
+   justify-self: flex-end;
+}
+.navBtns button {
+   padding: 10px 25px;
+   color: var(--whiteDeoColor);
+   background-color: var(--PurpleDeoColor);
+   font-size: 14px;
+   font-weight: 700;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   position: relative;
+}
+.navBtns button:hover {
+   animation: bounce 1500ms;
+}
+
+.heroSection {
+   display: grid;
+   place-items: center;
+
+   text-align: center;
+   height: 80vh;
+   color: white;
+}
+.heroSection h1 {
+   font-size: 4rem;
+}
+.heroSection p {
+   font-size: 24px;
+   margin-bottom: 30px;
+   font-weight: 600;
+}
+main button {
+   background-color: var(--PurpleDeoColor);
+   padding: 10px 15px;
+   font-size: 18px;
+   font-weight: 700;
+   color: var(--whiteDeoColor);
+   border: none;
+   border-radius: 7px;
+   margin-top: 10px;
+   cursor: pointer;
+}
+
+main button:hover {
+   animation: bounce 1500ms;
+}
+@keyframes bounce {
+   0%,
+   20%,
+   60%,
+   100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+   }
+
+   40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+   }
+
+   80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+   }
+}
