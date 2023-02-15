@@ -1,0 +1,114 @@
+:root {
+   --darkBlueComptition: #3c2e60;
+   --lightBlueComptition: #5451b1;
+   --garyColorComptition: #b9b9b9;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: "Poppins", sans-serif;
+}
+
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 7%;
+   position: sticky;
+}
+
+.navLinks {
+   width: 60%;
+}
+nav ul {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   list-style: none;
+}
+ul img {
+   width: 130px;
+}
+nav ul li a {
+   text-decoration: none;
+   font-weight: 600;
+   color: black;
+   box-shadow: inset 0 0 0 0 var(--lighblueComptition);
+   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   margin: 0 1rem;
+   padding: 0 0.8rem;
+   border-radius: 10px;
+}
+nav ul li a:hover {
+   /* padding: 2px 10px;
+   color: white;
+   border: 1px Solid var(--darkBlueComptition);
+   border-radius: 10px 0 10px 0;
+   background-color: var(--darkBlueComptition); */
+   box-shadow: inset 100px 0 0 0 var(--lightBlueComptition);
+   color: white;
+}
+nav button {
+   padding: 10px 20px;
+   background-color: var(--lightBlueComptition);
+   color: white;
+   border: none;
+   border-radius: 10px;
+   font-weight: 700;
+   font-family: "Poppins", sans-serif;
+   font-size: 14px;
+   cursor: pointer;
+   box-shadow: inset 0 0 0 0 var(--lighblueComptition);
+   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   /* margin: 0 1rem;
+   padding: 0 0.5rem; */
+}
+nav button:hover {
+   box-shadow: inset 105px 0 0 0 var(--darkBlueComptition);
+   color: white;
+}
+main {
+   padding: 20px 7%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+main h1 {
+   color: var(--darkBlueComptition);
+   font-size: 52px;
+   font-weight: 900;
+   line-height: 70px;
+   width: 70%;
+}
+main h1 span {
+   color: var(--lightBlueComptition);
+}
+main p {
+   color: var(--garyColorComptition);
+   margin: 30px auto;
+   font-weight: 700;
+}
+.mainRight img {
+   width: 650px;
+}
+main button {
+   padding: 10px 25px;
+   background-color: var(--lightBlueComptition);
+   color: white;
+   border: none;
+   border-radius: 10px;
+   font-weight: 700;
+   font-family: "Poppins", sans-serif;
+   font-size: 17px;
+   cursor: pointer;
+   box-shadow: inset 0 0 100px 0 var (--lighblueComptition);
+   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+main button:hover {
+   box-shadow: inset 172px 0 0 0 var(--darkBlueComptition);
+   color: white;
+}
