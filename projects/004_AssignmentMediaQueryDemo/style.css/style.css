@@ -1,0 +1,56 @@
+/*Screen Size */
+/*-Larger Screen:1440px; */
+/*-Normal Screen:1024px; */
+/*-Tablet Screen:768px; */
+/*-Mobile Screen:425px; */
+body {
+   background-color: #7fffd5;
+   text-align: center;
+}
+h1 {
+   font-size: 42px;
+}
+p {
+   font-size: 36px;
+}
+.larger,
+.normal,
+.tablet,
+.mobile {
+   display: none;
+}
+@media screen and (max-width: 424.99px) {
+   body {
+      background-color: #ca3142;
+   }
+
+   .mobile {
+      display: block;
+   }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+   body {
+      background-color: #75fbfd;
+   }
+
+   .tablet {
+      display: block;
+   }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   body {
+      background-color: #b1882f;
+   }
+
+   .normal {
+      display: block;
+   }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+   body {
+      background-color: #208b21;
+   }
+   .larger {
+      display: block;
+   }
+}
