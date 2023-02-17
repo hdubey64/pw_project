@@ -146,6 +146,9 @@ footer ul li a img {
    header {
       padding: 10 20px;
    }
+   .humbrger img {
+      display: block;
+   }
 
    .navLinks {
       display: none;
