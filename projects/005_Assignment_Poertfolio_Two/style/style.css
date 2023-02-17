@@ -3,18 +3,26 @@
    --whitePortfolioColor: #ffffff;
    --yellowPortfolioColor: #c3c358;
    --bluePortfolioColor: #0000ff;
+   --lightBluePortfolioColor: #6464e0;
 }
 * {
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 body {
    background-color: var(--navyPortfolioColor);
 }
 
 header {
-   padding: 10px 7%;
+   padding: 30px 7%;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   background-color: transparent(0.9);
+   -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(8px);
 }
 .humbrger img {
    width: 30px;
@@ -40,11 +48,16 @@ nav ul li a {
    text-decoration: none;
    color: var(--whitePortfolioColor);
    font-size: 18px;
+   padding: 20px;
 }
 
 /* nav ul li a:active {
    background-color: aqua;
 } */
+nav ul li:first-child {
+   background-color: var(--lightBluePortfolioColor);
+   border-radius: 10px;
+}
 .profile {
    display: flex;
    justify-content: center;
@@ -69,15 +82,15 @@ nav ul li a {
 .profileRight img {
    width: 600px;
 }
-.project {
-   padding: 10px 7%;
-}
+
 main {
    display: grid;
    grid-template-columns: 1fr;
    place-items: center;
    color: var(--whitePortfolioColor);
    margin: 20px auto;
+   margin-top: 50px;
+   padding: 10px 7%;
 }
 .sectionHead {
    font-size: 36px;
