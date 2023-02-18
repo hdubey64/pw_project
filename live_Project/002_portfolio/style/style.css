@@ -6,8 +6,7 @@
 * {
    margin: 0;
    padding: 0;
-   overflow: hidden;
-
+   /* overflow: hidden; */
    box-sizing: border-box;
 }
 body {
@@ -68,12 +67,12 @@ button:nth-child(1):hover {
 }
 nav {
    display: flex;
-   width: 100%;
+   /* width: 100%; */
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-between;
    background-color: var(--whiteColor);
    color: var(--blueColor);
-   padding: 10px 5px;
+   padding: 5px 6%;
 }
 
 nav .logo {
@@ -92,7 +91,7 @@ nav .logo h1 span {
 nav ul {
    display: flex;
    align-items: center;
-   gap: 30px;
+   gap: 10px;
 }
 nav a {
    color: var(--blueColor);
@@ -106,7 +105,7 @@ nav ul a:hover {
 
 .search-field {
    display: flex;
-   gap: 15px;
+   gap: 5px;
 }
 input {
    padding: 4px 10px;
