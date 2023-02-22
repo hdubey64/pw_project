@@ -7,15 +7,18 @@
       <!-- css -->
       <link rel="stylesheet" href="./assets/style/style.css" />
       <!-- Google font cdn -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-      
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+         rel="stylesheet"
+      />
+
       <title>Beats</title>
    </head>
    <body>
       <!-- Header -->
-      <header id="home">
+      <header>
          <!-- Navbar   -->
          <nav>
             <!-- Brand logo -->
@@ -25,20 +28,18 @@
             <!-- Nav Links -->
             <div class="navLinks">
                <ul>
-                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="#home">Home</a></li>
                   <li><a href="#">Specs</a></li>
                   <li><a href="Home">Case</a></li>
                   <li><a href="Home">Products</a></li>
-                 
                </ul>
                <button>Shop</button>
-               
             </div>
-            
          </nav>
       </header>
+
       <!-- Hero section -->
-      <section title="Hero Section" class="heroSection" >
+      <section title="Hero Section" class="heroSection" id="home">
          <!-- Main -->
          <main>
             <div class="heroSectionMain">
@@ -49,29 +50,28 @@
                <!-- Hero right content -->
                <div class="heroSectionRight">
                   <!-- Hero right img -->
-                  <div>
+                  <div class="heroSectionRightLogo">
                      <img src="./assets/images/onEar.png" alt=" Onear logo" />
                   </div>
                   <div class="overview">
                      <h1>Beats 3</h1>
                      <h4>Overview</h4>
                      <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Totam hic doloribus eum, ipsam quos expedita
-                        repudiandae nobis saepe esse atque ducimus ex iusto,
-                        autem quia aperiam laborum. Harum, vitae cupiditate.
+                        Enjoy award-winning Beats sound with wireless listening
+                        freedom and a sleek, streamlined design with comfortable
+                        padded earphones, delivering first-rate playback.
                      </p>
                      <!-- Shopping card -->
                      <div class="card">
                         <img src="./assets/icons/shoppingBag.png" alt="" />
-                        <h4>Add To Bag</h4>
+                        <span>Add To Bag</span>
                         <h3>N399K</h3>
                      </div>
                   </div>
                </div>
             </div>
             <!-- E-Comerce pages -->
-            <div class="E-Commerce">
+            <div class="e-Commerce">
                <a href="#"
                   ><img src="./assets/images/appleLogo.png" alt="Apple logo"
                /></a>
@@ -91,61 +91,83 @@
             </div>
          </main>
       </section>
+
       <!-- Specification section -->
       <section title="Specification" class="specification">
          <!-- Specification section logo -->
          <img src="./assets/icons/specsLogo.png" alt="" />
-         <!-- Specification section left-->
-         <div class="specificationLeft">
-            <div class="conection">
-               <img src="./assets/icons/bluetooth.png" alt="Bluetooth Iconm" />
-               <p>Connection</p>
-               <p>Bluetooth v5.2</p>
+         <!-- Specification main -->
+         <main>
+            <!-- Specification section left-->
+            <div class="specificationLeft">
+               <div class="conection">
+                  <img
+                     src="./assets/icons/bluetooth.png"
+                     alt="Bluetooth Iconm"
+                  />
+                  <p>Connection</p>
+                  <p>Bluetooth v5.2</p>
+               </div>
+               <div class="battery">
+                  <img src="./assets/icons/battery.png" alt="Battery Iconm" />
+                  <p>Battery</p>
+                  <p>Duration 40h</p>
+               </div>
+               <div class="Load">
+                  <img src="./assets/icons/charger.png" alt="Load Iconm" />
+                  <p>Load</p>
+                  <p>Fast Charge 4.2-AAC</p>
+               </div>
+               <div class="microphone">
+                  <img src="./assets/icons/mic.png" alt="Microphone Iconm" />
+                  <p>Microphone</p>
+                  <p>Supports Apple Siri and Google</p>
+               </div>
             </div>
-            <div class="battery">
-               <img src="./assets/icons/battery.png" alt="Battery Iconm" />
-               <p>Battery</p>
-               <p>Duration 40h</p>
+            <!-- Specification section right-->
+            <div class="specificationRight">
+               <!-- Specification section right banner -->
+               <img src="./assets/images/specsImage.png" alt="Specs banner" />
             </div>
-            <div class="Load">
-               <img src="./assets/icons/charger.png" alt="Load Iconm" />
-               <p>Load</p>
-               <p>Fast Charge 4.2-AAC</p>
-            </div>
-            <div class="microphone">
-               <img src="./assets/icons/mic.png" alt="Microphone Iconm" />
-               <p>Microphone</p>
-               <p>Supports Apple Siri and Google</p>
-            </div>
-         </div>
-         <!-- Specification section right-->
-         <div class="specificationRight">
-            <!-- Specification section right banner -->
-            <img src="./assets/images/specsImage.png" alt="Specs banner" />
-         </div>
+         </main>
       </section>
+
       <!-- Case section -->
       <section title="Case" class="case">
-         <!-- Case section top-->
-         <div class="caseTop">
-            <!-- Case section top left-->
-            <div class="caseTopLeft">
-               <img src="./assets/images/caseImage.png" alt="Case Banner" />
+         <!-- Case logo -->
+         <img src="./assets/icons/caseLogo.png" alt="" />
+         <!-- Case main-->
+         <main>
+            <!-- Case section top-->
+            <div class="caseTop">
+               <!-- Case section top left-->
+               <div class="caseTopLeft">
+                  <img src="./assets/images/caseImage.png" alt="Case Banner" />
+               </div>
+
+               <!-- Case section top right-->
+               <div class="caseTopRight">
+                  <p>
+                     With a comfortable and adaptable case so that you can store
+                     itwhenever you want, and keep your durability forever.
+                  </p>
+                  <div class="btn">
+                     <button>
+                        <img src="./assets/icons/group.png" alt="" /> More Info
+                     </button>
+                  </div>
+               </div>
             </div>
-            <!-- Case section top right-->
-            <div class="caseRight">
-               <p>
-                  With a comfortable and adaptable case so that you can store it
-                  whenever you want, and keep your durability forever.
-               </p>
-               <p><img src="./assets/icons/group.png" alt="" /> More Info</p>
-            </div>
-         </div>
-         <!-- Case section bottom-->
-         <div class="caseBottom">
+         </main>
+      </section>
+
+      <!-- Case card Section -->
+      <section title="Case card" class="caseCard">
+         <!-- Case card main -->
+         <main>
             <!-- Case section bottom left-->
-            <div class="caseBottomLeft">
-               <h1>Immense yourself in music</h1>
+            <div class="caseCardLeft">
+               <h1>Immense yourself in Your music</h1>
                <p>buy Now. Up to 40% off.</p>
                <button>
                   <img
@@ -155,96 +177,158 @@
                </button>
             </div>
             <!-- Case section bottom right-->
-            <div class="caseBottomRight">
+            <div class="caseCardRight">
                <img src="./assets/images/buyNowSectionImage.png" alt="" />
             </div>
-         </div>
+         </main>
       </section>
+
       <!-- Product section -->
       <section title="Product Section" class="productSection">
-         <!-- Product black -->
-         <div class="product">
-            <img src="./assets/images/black.png" alt="" />
-            <div class="productInfo">
-               <p>Black <br /><span>N299K</span></p>
+         <!-- Product logo -->
+         <img src="./assets/icons/productLogo.png" alt="" />
+         <main>
+            <!-- Product black -->
+            <div class="product">
+               <img src="./assets/images/black.png" alt="" class="banner" />
+               <div class="productInfo">
+                  <p><span> Black</span> <br />N299K</p>
+                  <button>
+                     <img src="./assets/icons/shoppingBag.png" alt="" />
+                  </button>
+               </div>
             </div>
-         </div>
-         <!-- Product red black -->
-         <div class="product">
-            <img src="./assets/images/redBlack.png" alt="" />
-            <div class="productInfo">
-               <p>Red Black <br /><span>N299K</span></p>
+            <!-- Product red black -->
+            <div class="product">
+               <img src="./assets/images/redBlack.png" alt="" class="banner" />
+               <div class="productInfo">
+                  <p><span>Red Black</span> <br />N299K</p>
+                  <button>
+                     <img src="./assets/icons/shoppingBag.png" alt="" />
+                  </button>
+               </div>
             </div>
-         </div>
-         <!-- Product night black -->
-         <div class="product">
-            <img src="./assets/images/nightBlack.png" alt="" />
-            <div class="productInfo">
-               <p>Night Black <br /><span>N299K</span></p>
+            <!-- Product night black -->
+            <div class="product">
+               <img
+                  src="./assets/images/nightBlack.png"
+                  alt=""
+                  class="banner"
+               />
+               <div class="productInfo">
+                  <p><span>Night Black</span> <br />N299K</p>
+                  <button>
+                     <img src="./assets/icons/shoppingBag.png" alt="" />
+                  </button>
+               </div>
             </div>
-         </div>
-         <!-- Product blue -->
-         <div class="product">
-            <img src="./assets/images/blue.png" alt="" />
-            <div class="productInfo">
-               <p>Blue <br /><span>N299K</span></p>
+            <!-- Product blue -->
+            <div class="product">
+               <img src="./assets/images/blue.png" alt="" class="banner" />
+               <div class="productInfo">
+                  <p><span> Blue</span> <br />N299K</p>
+                  <button>
+                     <img src="./assets/icons/shoppingBag.png" alt="" />
+                  </button>
+               </div>
             </div>
-         </div>
-         <!-- Product black -->
-         <div class="produt">
-            <img src="./assets/images/twilightGray.png" alt="" />
-            <div class="productInfo">
-               <p>Black <br /><span>N299K</span></p>
+            <!-- Product black -->
+            <div class="product">
+               <img
+                  src="./assets/images/twilightGray.png"
+                  alt=""
+                  class="banner"
+               />
+               <div class="productInfo">
+                  <p><span> Black</span> <br />N299K</p>
+                  <button>
+                     <img src="./assets/icons/shoppingBag.png" alt="" />
+                  </button>
+               </div>
             </div>
-         </div>
+         </main>
       </section>
+
+      <!-- Footer section -->
       <footer>
-         <!-- Brand logo -->
-         <img src="./assets/images/beatsLogo.png" alt="" />
-         <!-- Product -->
-         <div class="products">
-            <h4>Product</h4>
-            <ul>
-               <li><a href="#">Headphones</a></li>
-               <li><a href="#">Earphones</a></li>
-               <li><a href="#">Earbuds</a></li>
-               <li><a href="#">Accessories</a></li>
-            </ul>
-         </div>
-         <!--Support  -->
-         <div class="support">
-            <h4>Support</h4>
-            <ul>
-               <li><a href="#">Product Help</a></li>
-               <li><a href="#">Register</a></li>
-               <li><a href="#">Updates</a></li>
-               <li><a href="#">Provides</a></li>
-            </ul>
-         </div>
-         <!-- Subscription -->
-         <div class="subscription">
-            <!-- Input -->
-            <div>
-              <input type="email" placeholder="Email" />
-              <div class="subscribe">
-                <img src="./assets/icons/rightArrow.png" alt="rightArrow" />
-                <p>Subscribe</p>
-              </div>
-            </div>
-            <!-- Social Media -->
-            <div class="social">
+         <main>
+            <!-- Brand logo -->
+            <img src="./assets/images/beatsLogo.png" alt="" />
+            <!-- Product -->
+            <div class="products">
+               <h4>Product</h4>
                <ul>
-                  <li><a href="#"><img src="./assets/icons/facebook.png" alt=""></a></li>
-                  <li><a href="#"><img src="./assets/icons/twitter.png" alt=""></a></li>
-                  <li><a href="#"><img src="./assets/icons/instagram.png" alt=""></a></li>
-                  <li><a href="#"><img src="./assets/icons/linkedin.png" alt=""></a></li>
+                  <li><a href="#">Headphones</a></li>
+                  <li><a href="#">Earphones</a></li>
+                  <li><a href="#">Earbuds</a></li>
+                  <li><a href="#">Accessories</a></li>
                </ul>
             </div>
+            <!--Support  -->
+            <div class="support">
+               <h4>Support</h4>
+               <ul>
+                  <li><a href="#">Product Help</a></li>
+                  <li><a href="#">Register</a></li>
+                  <li><a href="#">Updates</a></li>
+                  <li><a href="#">Provides</a></li>
+               </ul>
+            </div>
+            <!-- Subscription -->
+            <div class="subscription">
+               <!-- Input -->
+               <div class="subscribe">
+                  <input type="email" placeholder="Email" />
+                  <!-- Subscribe button -->
+                  <button>
+                     <img
+                        src="./assets/icons/rightArrow.png"
+                        alt="rightArrow"
+                     />
+                     <p>Subscribe</p>
+                  </button>
+                  <div class="subscribe">
+                     <!-- Social Media -->
+                     <div class="social">
+                        <ul>
+                           <li>
+                              <a href="#"
+                                 ><img src="./assets/icons/facebook.png" alt=""
+                              /></a>
+                           </li>
+                           <li>
+                              <a href="#"
+                                 ><img src="./assets/icons/twitter.png" alt=""
+                              /></a>
+                           </li>
+                           <li>
+                              <a href="#"
+                                 ><img
+                                    src="./assets/icons/instagram.png"
+                                    alt=""
+                              /></a>
+                           </li>
+                           <li>
+                              <a href="#"
+                                 ><img src="./assets/icons/linkedin.png" alt=""
+                              /></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+         <div class="arrowUp">
             <!-- Arrow go Up -->
             <a href="#home">
-               <img class="arrow-up" src="./assets/icons/upArrow.png" alt="Arrow pic" />
+               <img
+                  class="arrow-up"
+                  src="./assets/icons/upArrow.png"
+                  alt="Arrow pic"
+               />
             </a>
-            
+         </div>
       </footer>
    </body>
 </html>
