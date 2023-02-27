@@ -194,3 +194,113 @@ let c = 50;
 //       console.log("j = " + j);
 //    }
 // }
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * While Loop* * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+// * * * * * * * * * * * * * * *
+// * * * sum of No. 1 to 10* * *
+// * * * * * * * * * * * * * * *
+
+// let sum = 0;
+// let i = 1;
+// while (i <= 10) {
+//    sum += i;
+//    i++;
+//    console.log(sum);
+// }
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * Do While Loop * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+// Write a program to print numbers from 1 to 7 in a line using do-while loop
+// let result = "";
+// let i = 0;
+// do {
+//    i = i + 1;
+//    result = result + i;
+// } while (i < 7);
+// console.log(result);
+
+// * * * * * * * * * * * * * * *
+// * * *Print no. from 1-10* * *
+// * * * * * * * * * * * * * * *
+
+// let n = 10;
+// let i = 0;
+// while (i <= n) {
+//    console.log(i);
+//    i = i + 1;
+// }
+
+// * * * * * * * * * * * * * * *
+// * * *Print no. from 10-1* * *
+// * * * * * * * * * * * * * * *
+
+// let n = 10;
+// let i = 1;
+// while (n >= i) {
+//    console.log(n);
+//    n = n - 1;
+// }
+
+// * * * * * * * * * * * * * * *
+// * * *  Break Statement  * * *
+// * * * * * * * * * * * * * * *
+
+// let i = 0;
+// while (i < 5) {
+//    console.log("Vishal");
+//    i++;
+// }
+
+// for (let i = 0; i < 4; i++) {
+//    console.log(i);
+//    if (i == 3) {
+//       break;
+//    }
+// }
+
+// let i = 0;
+// while (i < 4) {
+//    console.log(i);
+//    i++;
+//    if (i == 3) {
+//       break;
+//    }
+// }
+
+// * * * * * * * * * * * * * * *
+// * * * Continue Statement* * *
+// * * * * * * * * * * * * * * *
+
+// for (let i = 0; i < 20; i++) {
+//    if (i % 2 === 0) {
+//       continue;
+//    }
+//    console.log(i);
+// }
+
+// let i = 0;
+// while (i < 20) {
+//    i++;
+//    if (i % 2 === 0) {
+//       continue;
+//    }
+//    console.log(i);
+// }
+
+// * * * * * * * * * * * * * * *
+// * * * Ternary Operaters * * *
+// * * * * * * * * * * * * * * *
+
+// let isTheUserLoggedIn = true;
+// let isTheCoursePurchased = true;
+
+// isTheUserLoggedIn
+//    ? isTheCoursePurchased
+//       ? console.log("Access Granted")
+//       : console.log("Access Denied Please Purchased The Course")
+//    : console.log("Access Denied Please Login First");

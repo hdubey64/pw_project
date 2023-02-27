@@ -281,7 +281,6 @@ footer h4 {
    /* display: grid;
    grid-template-columns: 2fr 1fr; */
    place-items: start end;
-   border: 1px Solid red;
 }
 
 input {
@@ -295,8 +294,8 @@ input {
    display: grid;
    grid-template-columns: 1fr 2fr;
    position: relative;
-   top: -50px;
-   left: 175px;
+   top: -51px;
+   left: 178px;
    background-color: var(--blackBeatsColor);
    color: var(--whiteBeatsColor);
    border: none;
