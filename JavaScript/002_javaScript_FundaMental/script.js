@@ -1,6 +1,6 @@
-let arr = [1, 2, 3, 4, 5, "Vishal", "Amit"];
-let arr2 = ["Vishal", "Amit", "Ratnesh"];
-let arr4 = [10, 5, 5, 58, 4, 55, 4];
+// let arr = [1, 2, 3, 4, 5, "Vishal", "Amit"];
+// let arr2 = ["Vishal", "Amit", "Ratnesh"];
+// let arr4 = [10, 5, 5, 58, 4, 55, 4];
 // console.log(a);
 // console.log(b);
 // console.log(b[1]);
