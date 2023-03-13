@@ -21,6 +21,10 @@ header {
    position: sticky;
    top: 0;
    z-index: 1000;
+   /* filter: blur(1px);
+   -webkit-filter: blur(1px); */
+   -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
 }
 section {
    padding: 20px 7%;
@@ -73,7 +77,8 @@ nav {
    place-items: center;
 }
 .heroSectionLeft {
-   margin-top: -450px;
+   margin-top: -418px;
+   z-index: 1000;
 }
 
 .heroSectionRightLogo {
