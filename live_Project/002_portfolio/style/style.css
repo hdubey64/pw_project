@@ -148,7 +148,6 @@ input {
    align-items: center;
    justify-content: center;
    gap: 30px;
-
    width: 40%;
 }
 .hero-section-right img {
@@ -168,10 +167,6 @@ input {
    left: 110px;
    background-color: rgba(255, 255, 255, 0.164);
    color: var(--greenColor);
-}
-.project iframe {
-   width: 150px;
-   height: 100px;
 }
 .project h1 {
    font-size: 18px;
