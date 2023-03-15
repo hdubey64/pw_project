@@ -69,4 +69,27 @@
 // for (let i = 1; i <= 10; i++) {
 //   console.log(number + "*" + i + "=" + number * i);
 // }
-console.log("vishal");
+
+//+++++++++++++++++++++++++++++++++++++++++
+
+// let name = ["Vishal", "Ratnesh", "Ratan", "Dhiraj"];
+
+// name.map((element, index) => {
+//    console.log(element, index);
+// });
+
+//+++++++++++++++++++++++++++++++++++++++++
+// Without giveing return in function what is value of variable
+// const sum = (a, b) => {
+//    //    console.log(a + b);
+//    //    return a + b;
+// };
+
+// let myValue = sum(20, 50);
+// console.log(myValue);
+
+//+++++++++++++++++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++++++++++++++
+
+let name = "Vishal";
+console.log(name[2]);

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Image Slider</title>
+   </head>
+   <style>
+      img {
+         width: 200px;
+      }
+   </style>
+   <body>
+      <h1>This is an image slider</h1>
+      <img
+         id="image"
+         src="https://cdn.pixabay.com/photo/2023/02/12/21/29/flowers-7785967_640.jpg"
+         alt="Image will be here"
+      />
+      <div>
+         <button id="previousBtn">Previous Image</button>
+         <button id="nextBtn">Next Image</button>
+      </div>
+
+      <script>
+         const myImage = document.getElementById("image");
+         const previousBtn = document.getElementById("previousBtn");
+         const nextBtn = document.getElementById("nextBtn");
+
+         const imageSources = [
+            "https://cdn.pixabay.com/photo/2023/03/08/20/52/architecture-7838713_640.jpg",
+            "https://cdn.pixabay.com/photo/2023/03/11/10/42/plants-7844173_640.jpg",
+            "https://cdn.pixabay.com/photo/2023/03/08/18/22/berries-7838482_640.jpg",
+            "https://cdn.pixabay.com/photo/2023/03/06/15/29/bee-7833738__340.jpg",
+         ];
+
+         let currentIndex = 0;
+
+         nextBtn.addEventListener("click", () => {
+            if (currentIndex === imageSources.length - 1) {
+               currentIndex = 0;
+            } else {
+               currentIndex += 1;
+            }
+
+            myImage.src = imageSources[currentIndex];
+            // console.log(myImage.src);
+         });
+
+         previousBtn.addEventListener("click", () => {
+            if (currentIndex === 0) {
+               currentIndex = 3;
+            } else {
+               currentIndex -= 1;
+            }
+
+            myImage.src = imageSources[currentIndex];
+            // console.log(myImage.src);
+         });
+      </script>
+   </body>
+</html>
