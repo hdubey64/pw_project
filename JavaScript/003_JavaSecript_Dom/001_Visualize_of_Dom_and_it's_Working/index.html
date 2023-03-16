@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Dom Manipulation</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <section>
+         <div>
+            <h1>HTML element ko modify karna</h1>
+            <div class="content">
+               <h2 id="myHeading">JS Dom Example</h2>
+               <button onclick="changeText()">Click me to Change Text</button>
+            </div>
+         </div>
+         <div>
+            <h1>HTML element ko Dynamically Add karna</h1>
+            <div class="content">
+               <ul id="myList">
+                  <li>Cofee</li>
+                  <li>Tea</li>
+               </ul>
+               <button onclick="addNewItem()">Click me to add an Item</button>
+            </div>
+         </div>
+         <div>
+            <h1>Addition Calculator:</h1>
+            <div class="content">
+               <input id="num1" type="number" />
+               <input id="num2" type="number" />
+               <button onclick="add()">Add</button>
+               <p id="result"></p>
+            </div>
+         </div>
+         <div>
+            <h1>A Clock</h1>
+            <div class="content">
+               <p id="time"></p>
+            </div>
+         </div>
+         <div>
+            <h1>Random Quote Generator</h1>
+            <div class="content">
+               <p id="quote"></p>
+               <button onclick=" generate() ">Generate Quote</button>
+            </div>
+         </div>
+      </section>
+
+      <script src="./script.js"></script>
+   </body>
+</html>
