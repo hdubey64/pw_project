@@ -1,0 +1,13 @@
+body {
+   height: 90vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+button {
+   padding: 16px;
+   font-size: 20px;
+   border-radius: 25px;
+   background-color: #808080;
+}
