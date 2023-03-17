@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>JS Dom Part-II</title>
+   </head>
+   <body>
+      <div class="list">
+         <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+         </ul>
+      </div>
+
+      <script>
+         let title = document.createElement("h1");
+         title.className = "pwSkills";
+         title.style.fontSize = "5rem";
+         title.style.height = "80vh";
+         title.style.display = "grid";
+         title.style.placeItems = "center center";
+         title.textContent = "PwSkills Namaste !";
+         title.style.cursor = "pointer";
+         console.log(title);
+         document.body.appendChild(title);
+
+         let ul = document.querySelector("ul");
+         console.log(ul);
+
+         let lists = document.querySelectorAll("li");
+
+         for (let list of lists) {
+            ul.removeChild(list);
+         }
+         //  console.log(lists);
+      </script>
+   </body>
+</html>
