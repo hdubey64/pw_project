@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>004_Methos_Of_Dom_Part_III</title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         section {
+            height: 80vh;
+            display: grid;
+            place-items: center;
+            font-size: 2.5rem;
+         }
+         div {
+            text-align: center;
+         }
+         button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: cyan;
+            font-size: 1.5rem;
+            color: black;
+            font-weight: 700;
+            width: 200px;
+         }
+      </style>
+   </head>
+   <body>
+      <section>
+         <div>
+            <h1>Hello Bachho - PWSKILLS</h1>
+            <p id="js"></p>
+         </div>
+         <div>
+            <button id="logIn" onclick="logIn()">Log in</button>
+            <button id="changeTheme" onclick="lighBg()">Light Mode</button>
+         </div>
+      </section>
+   </body>
+   <script>
+      document.addEventListener("click", hello);
+      function hello() {
+         document.getElementById("js").innerHTML = "Namste Bachho";
+         document.getElementById("js").style.color = "red";
+      }
+
+      function logIn() {
+         if (document.querySelector("#logIn").innerHTML == "Log in") {
+            document.querySelector("#logIn").innerHTML = "Log Out";
+            document.querySelector("#logIn").style.color = "red";
+         } else {
+            document.querySelector("#logIn").innerHTML = "Log in";
+            document.querySelector("#logIn").style.color = "green";
+         }
+      }
+
+      document.querySelector("#changeTheme").addEventListener("click", lightBg);
+      function lightBg() {
+         if (document.querySelector("#changeTheme").innerHTML == "Light Mode") {
+            document.querySelector("#changeTheme").innerHTML = "Dark Mode";
+            document.querySelector("body").style.background = "white";
+            document.querySelector("body").style.color = "black";
+            document.querySelector("#changeTheme").style.color = "black";
+         } else {
+            document.querySelector("#changeTheme").innerHTML = "Light Mode";
+            document.querySelector("body").style.background = "#222";
+            document.querySelector("body").style.color = "white";
+            document.querySelector("#changeTheme").style.color = "white";
+         }
+      }
+   </script>
+</html>
