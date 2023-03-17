@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Method Of Dom Part-I</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <!-- ID -->
+      <p id="one">Namste</p>
+
+      <!-- class -->
+      <ul>
+         <li class="tech">One</li>
+         <li class="tech">Two</li>
+         <li class="tech">Three</li>
+      </ul>
+
+      <!-- Tag Name -->
+      <h4>Hey</h4>
+      <h4>Namste</h4>
+      <h4>Hola</h4>
+
+      <!-- Query Selector -->
+      <h2>Vishal</h2>
+      <h2 class="class">Shashank</h2>
+      <h2 id="ids">Sakshi</h2>
+
+      <script>
+         //Id
+         let var1 = document.getElementById("one");
+         console.log(var1.innerText);
+
+         //class
+         let var2 = document.getElementsByClassName("tech");
+         console.log(var2[2].innerText);
+         var2[2].innerText = "nodeJS";
+
+         // Tag name
+         let var3 = document.getElementsByTagName("h4");
+         console.log(var3[1].innerText);
+         var3[1].innerText = "Hello Pw Skills";
+         var3[1].style.color = "yellow";
+         var3[1].style.fontSize = "5rem";
+
+         // Query Selector
+
+         let var4 = document.querySelector(".class");
+         console.log(var4);
+         // var4.className = "class2";
+         var4.classList = "class2 class3 class4";
+
+         let var5 = document.querySelector("#ids");
+         console.log(var5);
+         var5.setAttribute("id", "js");
+
+         let var6 = document.querySelector("h2");
+         console.log(var6);
+         var6.setAttribute("title", "Vishal");
+      </script>
+   </body>
+
+   <script src="./script.js"></script>
+</html>
