@@ -1,0 +1,31 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: 0;
+}
+
+.container {
+   height: 80vh;
+   display: grid;
+   place-items: center;
+}
+.card {
+   display: grid;
+   gap: 50px;
+   place-items: center;
+}
+
+.app {
+   display: grid;
+   grid-template-columns: 3fr 1fr 3fr;
+   place-items: center center;
+}
+.result {
+   border: 1px Solid black;
+   padding: 12px 18px;
+   font-size: 22px;
+}
+button {
+   padding: 7px 15px;
+   font-size: 20px;
+}
