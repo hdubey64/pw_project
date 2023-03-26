@@ -1,0 +1,40 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: 0;
+}
+
+section {
+   height: 98vh;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   place-items: center center;
+}
+
+.box {
+   width: 400px;
+   height: 250px;
+   border: none;
+   border-radius: 10px;
+   background-color: #808080;
+   display: grid;
+   grid-template-columns: 1fr;
+   place-items: center center;
+   color: #fff;
+
+   text-align: center;
+}
+
+.box h1 {
+   font-size: 32px;
+}
+.box p {
+   font-size: 18px;
+}
+button {
+   background-color: #fff;
+   border: none;
+   border-radius: 10px;
+   padding: 15px 30px;
+   font-size: 20px;
+}
