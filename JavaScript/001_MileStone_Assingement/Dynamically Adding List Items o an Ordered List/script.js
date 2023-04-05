@@ -9,15 +9,19 @@ let data = [
    "Advance JavaScript",
    "Working with DOM",
 ];
+
 let counter = 0;
 
 function orderList() {
    if (data.length > counter) {
       let listData = document.createElement("li");
+
       let storage = document.querySelector(".para");
+
       listData.innerText = data[counter];
+
       counter++;
-      listData.style.transition = "all 2s";
+
       document.querySelector(".para").appendChild(listData);
 
       console.log(listData);
