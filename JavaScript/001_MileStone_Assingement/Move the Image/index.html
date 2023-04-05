@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Move the Image</title>
+      <style>
+         * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+         }
+         section {
+            background-image: conic-gradient(
+               #ffed82,
+               #d25ba6,
+               #a9ffff,
+               #3c6597,
+               #d23e64,
+               #2e5a86,
+               #ff6ec9,
+               #735eff,
+               #ffed82
+            );
+         }
+         div {
+            border: 1px Solid red;
+         }
+         /* main {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            width: 100vw;
+         } */
+         main img {
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 50px #a9ffff, -10px -10px 50px #ffed82;
+         }
+      </style>
+   </head>
+   <body>
+      <section>
+         <main>
+            <img
+               id="banner"
+               src="./assets/images/hd-wallpaper-729509.jpg"
+               alt=""
+            />
+         </main>
+         <script>
+            let picture = document.querySelector("#banner");
+            // let upPosition = picture.style.bottom;
+            // console.log(upPosition);
+            document.onkeydown = detectKey;
+            function detectKey(e) {
+               let posLeft = picture.offsetLeft;
+               let posTop = picture.offsetTop;
+               console.log(posLeft);
+               console.log(posTop);
+
+               e = e || window.event;
+
+               if (e.code == "ArrowUp") {
+                  picture.style.marginTop = posTop - 10 + "px";
+                  console.log("UP");
+               } else if (e.code == "ArrowDown") {
+                  picture.style.marginTop = posTop + 10 + "px";
+                  console.log("Down");
+               } else if (e.code == "ArrowLeft") {
+                  picture.style.marginLeft = posLeft - 58 + "px";
+                  console.log("Left");
+               } else if (e.code == "ArrowRight") {
+                  picture.style.positionLeft = 10 + "px";
+                  console.log("Right");
+               }
+               console.log(event.code);
+            }
+            let posRight = picture.offsetRight;
+            let posLeft = picture.offsetLeft;
+            let posbottom = picture.offsetBottom;
+            let posTop = picture.offsetTop;
+            console.log(posRight);
+            console.log(posTop);
+            console.log(posBottom);
+            console.log(posLeft);
+            // console.log(leftArrowKey);
+         </script>
+      </section>
+   </body>
+</html>
