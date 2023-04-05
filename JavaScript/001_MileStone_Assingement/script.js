@@ -1,8 +1,8 @@
 //Q.001 Password validation
 
-function validatePssword(pssword) {
+function validatePssword(password) {
    let confirmPassword = "Vishal9451@";
-   if (pssword === confirmPassword) {
+   if (password === confirmPassword) {
       return console.log("Password Validation Successfull 👍👍👍");
    } else {
       return console.log("Password validation Unsuccessfull 👎👎👎");
@@ -297,12 +297,14 @@ let productList = [
 
 let showOffer = (productList) => {
    let todayOffer = [];
+
    productList.forEach((element) => {
       todayOffer.push({
          ...element,
          save: Math.round((element.productPrice * element.productDiss) / 100),
       });
    });
+
    return todayOffer;
 };
 
@@ -313,7 +315,7 @@ console.log(showOffer(productList));
 // Q.016 Generate a random number
 
 const randomNum = (() => {
-   return Math.round(Math.random() * 100);
+   return Math.round(Math.random() * 100 + 1);
 })();
 
 console.log(randomNum);
@@ -323,23 +325,25 @@ console.log(randomNum);
 // Q.017 Build a banking application
 
 let userData = { name: "Vishal", balance: 25000 };
-
 function updateUserData(transactions, userData, amount) {
    switch (transactions) {
-      case "withdrawal":
+      case "deposit":
          userData.balance += amount;
          break;
-      case "deposit":
-         userData.forEach((element) => {
-            updateBalance.push(element.balance - amount);
-         });
+
+      case "withdrawal":
+         userData.balance -= amount;
          break;
+
       default:
-         return "Invalid input";
+         return "Invalid Data";
    }
+
    return userData;
 }
 
+console.table(updateUserData("withdrawal", userData, 5000));
+console.table(updateUserData("deposit", userData, 15000));
 console.table(updateUserData("withdrawal", userData, 5000));
 
 // let userData = { name: "Vishal", balance: 25000 };
@@ -365,4 +369,14 @@ console.table(updateUserData("withdrawal", userData, 5000));
 // console.table(updateUserData(TransactionsType.WITHDRAWAL, userData, 5000));
 
 // Q.017 Build a banking application
-console.log(resultTwo);
+
+// Jab hum function call "console.log(randomNum)" karenge
+// To 1-99 ke beech ka koi bhi ek no. print ho jaye
+// 52 || 51 || 55 || 12 || 10 ||
+
+// ┌─────────┬──────────┐
+// │ (index) │  Values  │
+// ├─────────┼──────────┤
+// │  name   │ 'Vishal' │
+// │ balance │  33000   │
+// └─────────┴──────────┘
