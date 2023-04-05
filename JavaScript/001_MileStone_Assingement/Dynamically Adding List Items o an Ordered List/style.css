@@ -8,7 +8,7 @@ section {
    display: grid;
    place-items: center;
 
-   background-image: linear-gradient(27deg, #537fe7 50%, #181823 50%);
+   background-image: linear-gradient(27deg, #537fe7, #bc1fff, #181823);
 }
 main {
    border: none;
@@ -25,9 +25,9 @@ main {
 .list {
    display: grid;
    position: relative;
-
    display: grid;
 }
+
 .para {
    display: grid;
    place-items: start, center;
@@ -39,13 +39,18 @@ button {
    height: 100%;
 
    background-color: #537fe7;
-   border-radius: 0 10px 10px 0;
+   border-radius: 0 10px 0 0;
    border: none;
    cursor: pointer;
    font-size: 66px;
    font-weight: 700;
    color: white;
+   transition: background-color 0.3s ease;
 }
+button:active {
+   opacity: 0.9;
+}
+
 ol {
    padding: 20px;
 }
