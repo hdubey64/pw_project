@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Text Highlighting</title>
+      <style>
+         * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+         section {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 10px 8%;
+            background-image: linear-gradient(
+               to left,
+               rgb(0, 255, 251) 10%,
+               rgb(255, 0, 221)
+            );
+         }
+         main {
+            border: none;
+            padding: 3.5% 7%;
+            border-radius: 10px;
+            background-color: #738ced;
+         }
+         main div {
+            display: grid;
+            place-items: center;
+            gap: 30px;
+         }
+         h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+         }
+         p {
+            text-align: justify;
+            font-size: 20px;
+            color: white;
+         }
+      </style>
+   </head>
+   <body>
+      <section>
+         <main>
+            <div>
+               <h1>Text Highlighting greater than 8 characters.</h1>
+               <p id="para">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam, delectus ea vel sunt distinctio sapiente repellendus
+                  enim odit at accusamus facilis perspiciatis et commodi
+                  praesentium corporis ratione! Sint, exercitationem nostrum!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                  quis corporis facere necessitatibus explicabo laboriosam
+                  cupiditate expedita, quam rerum. Blanditiis obcaecati repellat
+                  itaque quos possimus ipsam error ut tempore similique? Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                  officia laudantium quis veniam iure fuga ut quaerat, animi
+                  sunt praesentium quo. Amet doloribus sint facilis quis! Libero
+                  delectus id corrupti.
+               </p>
+            </div>
+         </main>
+      </section>
+      <script src="./script.js"></script>
+   </body>
+</html>
