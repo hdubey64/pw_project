@@ -9,16 +9,26 @@ section {
    background-color: rgba(238, 238, 238, 0.524);
    display: grid;
    place-items: center center;
+   background-image: conic-gradient(
+      #7dff8e,
+      #3b3ba0,
+      #ffe21a,
+      #ff6eb5,
+      #aa77ff,
+      #ff5228,
+      #7dff8e
+   );
 }
 
 .content {
+   padding: 5% 7%;
    background-color: white;
-   width: 400px;
-   height: 250px;
+   width: 800px;
+   height: 500px;
    display: grid;
-   /* grid-template-columns: repeat(2, 1fr); */
-   grid-template-rows: 1fr 1fr 1fr 2fr;
-   place-items: center center;
+   border-radius: 10px;
+   background-color: black;
+   background-image: conic-gradient(#7dff8e, #ff6eb5, #7dff8e);
 }
 
 .emailInput {
@@ -26,22 +36,42 @@ section {
    flex-direction: column;
    font-weight: 500;
 }
-.passwordInput {
-   display: flex;
-   flex-direction: column;
-   font-weight: 500;
+.emailInput label {
+   font-size: 1.5rem;
+   font-weight: 700;
+}
+.emailInput input {
+   padding: 3% 2%;
+   border-radius: 50px;
+   margin: px 0;
+   background: rgb(255, 238, 238);
+}
+input {
+   margin: 10px 0;
+   border: none;
 }
 
+.submitButton {
+   margin: auto;
+}
+.newpara {
+   margin: 20px auto;
+   font-size: 2.5rem;
+   font-weight: 700;
+}
 .submitButton input {
-   padding: 12px 30px;
+   margin: 0 auto;
+   padding: 20px 100px;
    font-size: 18px;
    font-weight: 700;
    border: none;
-   border-radius: 5px;
+   border-radius: 50px;
    cursor: pointer;
+   background: #aa77ff;
 }
 .submitButton input:hover {
    background-color: white;
-   border: 1px Solid black;
-   border-radius: 1000px 0 1000px 1000px;
+   border: none;
+   border-radius: 50px;
+   background: #7dff8e;
 }
