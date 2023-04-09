@@ -27,23 +27,27 @@
          div {
             border: 1px Solid red;
          }
-         /* main {
-            display: grid;
-            place-items: center;
+         main {
+            position: relative;
             height: 100vh;
             width: 100vw;
-         } */
+            overflow: hidden;
+         }
          main img {
-            width: 300px;
-            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             border-radius: 20px;
             box-shadow: 10px 10px 50px #a9ffff, -10px -10px 50px #ffed82;
+            width: 300px;
+            height: 200px;
          }
       </style>
    </head>
    <body>
       <section>
-         <main>
+         <main style="border: 1px solid red">
             <img
                id="banner"
                src="./assets/images/hd-wallpaper-729509.jpg"
@@ -56,37 +60,75 @@
             // console.log(upPosition);
             document.onkeydown = detectKey;
             function detectKey(e) {
-               let posLeft = picture.offsetLeft;
-               let posTop = picture.offsetTop;
-               console.log(posLeft);
-               console.log(posTop);
+               console.log(e.code);
+               move_img(e.code);
+               // let posLeft = picture.offsetLeft;
+               // let posTop = picture.offsetTop;
 
-               e = e || window.event;
+               // console.log("post left", posLeft);
+               // console.log(posTop);
 
-               if (e.code == "ArrowUp") {
-                  picture.style.marginTop = posTop - 10 + "px";
-                  console.log("UP");
-               } else if (e.code == "ArrowDown") {
-                  picture.style.marginTop = posTop + 10 + "px";
-                  console.log("Down");
-               } else if (e.code == "ArrowLeft") {
-                  picture.style.marginLeft = posLeft - 58 + "px";
-                  console.log("Left");
-               } else if (e.code == "ArrowRight") {
-                  picture.style.positionLeft = 10 + "px";
-                  console.log("Right");
-               }
-               console.log(event.code);
+               // e = e || window.event;
+
+               // if (e.code == "ArrowUp") {
+               //    picture.style.marginTop = posTop - 10 + "px";
+               //    console.log("UP");
+               // } else if (e.code == "ArrowDown") {
+               //    picture.style.marginTop = posTop + 10 + "px";
+               //    console.log("Down");
+               // } else if (e.code == "ArrowLeft") {
+               //    picture.style.marginLeft = posLeft - 58 + "px";
+               //    console.log("Left");
+               // } else if (e.code == "ArrowRight") {
+               //    // picture.style.marginLeft = posLeft + "10px";
+               //    console.log("Right", picture.offsetTop);
+               //    const temp = picture.offsetTop + 50;
+               //    picture.style.top = temp;
+               // }
+               // console.log(event.code);
             }
-            let posRight = picture.offsetRight;
-            let posLeft = picture.offsetLeft;
-            let posbottom = picture.offsetBottom;
-            let posTop = picture.offsetTop;
-            console.log(posRight);
-            console.log(posTop);
-            console.log(posBottom);
-            console.log(posLeft);
+            // let posRight = picture.offsetRight;
+            // let posLeft = picture.offsetLeft;
+            // let posbottom = picture.offsetBottom;
+            // let posTop = picture.offsetTop;
+
+            // console.log(posRight);
+            // console.log(posTop);
+            // console.log(posBottom);
+            // console.log(posLeft);
             // console.log(leftArrowKey);
+         </script>
+
+         <script>
+            function move_img(str) {
+               var step = 10; // change this to different step value
+               switch (str) {
+                  case "ArrowUp":
+                  case "KeyW":
+                     var x = document.getElementById("banner").offsetTop;
+                     x = x - step;
+                     document.getElementById("banner").style.top = x + "px";
+                     break;
+
+                  case "ArrowDown":
+                     var x = document.getElementById("banner").offsetTop;
+                     x = x + step;
+                     document.getElementById("banner").style.top = x + "px";
+                     break;
+
+                  case "ArrowLeft":
+                     var y = document.getElementById("banner").offsetLeft;
+                     y = y - step;
+                     document.getElementById("banner").style.left = y + "px";
+                     break;
+
+                  case "ArrowRight":
+                     var y = document.getElementById("banner").offsetLeft;
+                     y = y + step;
+                     document.getElementById("banner").style.left = y + "px";
+                     break;
+               }
+            }
          </script>
       </section>
    </body>
