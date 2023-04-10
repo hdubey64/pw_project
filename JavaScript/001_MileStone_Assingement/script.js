@@ -344,7 +344,7 @@ function updateUserData(transactions, userData, amount) {
 
 console.table(updateUserData("withdrawal", userData, 5000));
 console.table(updateUserData("deposit", userData, 15000));
-console.table(updateUserData("withdrawal", userData, 5000));
+console.table(updateUserData("withdrawal", userData, 10000));
 
 // let userData = { name: "Vishal", balance: 25000 };
 
@@ -367,16 +367,3 @@ console.table(updateUserData("withdrawal", userData, 5000));
 // }
 
 // console.table(updateUserData(TransactionsType.WITHDRAWAL, userData, 5000));
-
-// Q.017 Build a banking application
-
-// Jab hum function call "console.log(randomNum)" karenge
-// To 1-99 ke beech ka koi bhi ek no. print ho jaye
-// 52 || 51 || 55 || 12 || 10 ||
-
-// ┌─────────┬──────────┐
-// │ (index) │  Values  │
-// ├─────────┼──────────┤
-// │  name   │ 'Vishal' │
-// │ balance │  33000   │
-// └─────────┴──────────┘
