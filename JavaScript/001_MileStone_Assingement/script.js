@@ -346,6 +346,8 @@ console.table(updateUserData("withdrawal", userData, 5000));
 console.table(updateUserData("deposit", userData, 15000));
 console.table(updateUserData("withdrawal", userData, 10000));
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // let userData = { name: "Vishal", balance: 25000 };
 
 // const TransactionsType = { WITHDRAWAL: "withdrawal", DEPOSIT: "deposit" };
