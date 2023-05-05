@@ -83,9 +83,7 @@ console.log("Qeestion:5");
 let myArrayFour = [5, 7, 54, 74, 2, 58, 4];
 
 const findMaxMinNumber = () => {
-   let max = Math.max(...myArrayFour);
-   let min = Math.min(...myArrayFour);
-   return { Max: max, Min: min };
+   return { Max: Math.max(...myArrayFour), Min: Math.min(...myArrayFour) };
 };
 
 const resultMaxMin = findMaxMinNumber(myArrayFour);
