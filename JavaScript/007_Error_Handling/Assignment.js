@@ -97,31 +97,86 @@ let sum = Calculator.add(3, 4);
 console.log("sum", sum);
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//Q.6 Create a class called User with properties username and password. Implement a getter method for password that returns the password with all characters replaced by asterisks. Implement a setter method for password that checks if the new password is at least 8 characters long and contains at least one number and one uppercase letter. If the password is valid, set the new password. If not, log an error message.
+//Q.7 Create a class called User with properties username and password. Implement a getter method for password that returns the password with all characters replaced by asterisks. Implement a setter method for password that checks if the new password is at least 8 characters long and contains at least one number and one uppercase letter. If the password is valid, set the new password. If not, log an error message.
 
-class User {
-   #password;
-   constructor(u, p) {
-      this.username = u;
-      this.#password = p;
-   }
-   get password() {
-      return this.#password.replace(/./g, "*");
-   }
+// class User {
+//    #password;
+//    constructor(u, p) {
+//       this.username = u;
+//       this.#password = p;
+//    }
+//    get password() {
+//       return this.#password.replace(/./g, "*");
+//    }
 
-   setPassword(p) {
-      if (p.length < 8 || !/\d/.test(p) || !/[A-Z]/.test(p)) {
-         console.log(
-            "Error: Password must be at least 8 characters long and contain at least one number and one uppercase letter."
-         );
-      } else {
-         this.#password = p;
-      }
+//    setPassword(p) {
+//       if (p.length < 8 || !/\d/.test(p) || !/[A-Z]/.test(p)) {
+//          console.log(
+//             "Error: Password must be at least 8 characters long and contain at least one number and one uppercase letter."
+//          );
+//       } else {
+//          this.#password = p;
+//       }
+//    }
+// }
+
+// const user = new User("Mithun", "Password123");
+// console.log(user.password);
+
+// user.setPassword("Password");
+// user.setPassword("password123");
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Q.8 Create a prototype object called Student with a property name. Add a method called printDetails to the prototype that logs the string "Hello, my name is {name}" to the console. Instantiate a Student object with the name "Mithun" and call the printDetails method.
+const studentPrototype = {
+   printDeatails() {
+      console.log(`Hello, the student is ${this.name}!`);
+   },
+};
+
+class Student {
+   constructor(name) {
+      this.name = name;
    }
 }
 
-const user = new User("Mithun", "Password123");
-console.log(user.password);
+Object.assign(Student.prototype, studentPrototype);
+const student = new Student("Vishal");
+student.printDeatails();
 
-user.setPassword("Password");
-user.setPassword("password123");
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Q.8  Create a numberChecker function that takes an array of numbers as an argument and returns a function.There turned function should take another number as an argument and return true if the number is in the array, and false otherwise.
+
+// function numberChecker(arr) {
+//    const set = new Set(arr);
+//    return function (num) {
+//       return set.has(num);
+//    };
+// }
+
+// const myArr = [1, 2, 3, 4, 5, 6];
+// const checkNum = numberChecker(myArr);
+
+// console.log(checkNum(3));
+// console.log(checkNum(7));
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Q.8 Write a function that takes an array of products and returns a function that filters the array by a given product category. The function must filter an eCommerce products array by a specific category. The closure filters products using the filter() method. Finally, it returns a new array containing only the products with the same category as the input.
+
+let products = [
+   { name: "Shirt", category: "Clothing" },
+   { name: "Pants", category: "Clothing" },
+   { name: "Hat", category: "Accessories" },
+   { name: "Sunglasses", category: "Accessories" },
+];
+
+function filterByCategory(arr) {
+   return function (category) {
+      return arr.filter(function (arr) {
+         return arr.category === category;
+      });
+   };
+}
+
+var clothingProducts = filterByCategory(products)("Clothing");
+console.log(clothingProducts);
