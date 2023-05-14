@@ -80,4 +80,4 @@ items.forEach(function iterator(num) {
    console.log(num);
 });
 
-console.log("Page Coumt", pageCount);
+console.log("Page Count", pageCount);

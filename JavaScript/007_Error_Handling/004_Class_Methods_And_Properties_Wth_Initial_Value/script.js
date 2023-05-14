@@ -79,3 +79,16 @@ Product.custom();
 /*
  *The theory of this keyword pointing  to calling context is not applicable with arrow function
  */
+class Car {
+   constructor(c, m, y) {
+      this.company = c;
+      this.model = m;
+      this.year = y;
+   }
+   getDiscription() {
+      return `This is a ${this.year} ${this.company} ${this.model}.`;
+   }
+}
+
+const myCar = new Car("Skoda", "Rapid", 2023);
+console.log(myCar.getDiscription());
