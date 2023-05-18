@@ -200,12 +200,16 @@
 //Q.7 Write a JavaScript program that uses the Fetch method to retrieve data from an API, and then handles errors that may occur. For example, you could use the API at https://jsonplaceholder.typicode.com/posts/123456789 to simulate an error, and then display an error message on the webpage.
 
 async function displayError() {
-   fetch(" https://jsonplaceholder.typicode.com/posts").then((response) => {
-      if (!response.ok) {
-         throw new Error("Network Response was not ok ");
+   fetch(" https://jsonplaceholder.typicode.com/posts/123456789").then(
+      async (response) => {
+         console.log(response);
+         if (!response.ok) {
+            alert("Network Response was not ok ");
+            throw new Error("Network Response was not ok ");
+         }
+         return await response.json();
       }
-      return response.json();
-   });
+   );
 }
 
 displayError();
