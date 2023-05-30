@@ -4,19 +4,76 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         rel="stylesheet"
+      />
+
       <title>Dom Manipultaion</title>
       <style>
+         * {
+            padding: 0;
+            margin: 0;
+         }
          body {
+            background: #000000;
+            /* background: #00ff0d; */
+            font-family: "Poppins", sans-serif;
+            display: grid;
+            place-items: center;
+            height: 92vh;
+         }
+         section {
+            width: 55%;
             background: #333;
+            border-radius: 10px;
+            display: grid;
+            place-items: center center;
             color: white;
+            padding: 50px 0;
+         }
+         section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+         }
+         .question {
+            font-size: 2rem;
+            margin: 10px auto;
+         }
+         .answers {
+            font-size: 1.2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding-left: 20px;
+            margin: -10px 0 20px 0;
+         }
+
+         .latter {
+            display: inline;
+         }
+         .latter > span {
+            color: white;
+            font-weight: 700;
+         }
+         button {
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: "Poppins", sans-serif;
+            padding: 10px 45px;
+            border-radius: 5px;
+            margin: 20px auto auto auto;
          }
       </style>
    </head>
    <body>
-      <h1>JavaScript Quiz App</h1>
-      <div id="quiz"></div>
-      <button id="submit">Submit</button>
-      <div id="results"></div>
+      <section>
+         <h1>JavaScript Quiz App</h1>
+         <div id="quiz"></div>
+         <button id="submit">Submit</button>
+         <div id="results"></div>
+      </section>
       <script>
          const quizContainer = document.getElementById("quiz");
          const submitButton = document.getElementById("submit");
@@ -58,8 +115,8 @@
                for (letter in currentQuestion.answers) {
                   answers.push(
                      `<label>
-                        <input type = "radio" name = "question_${questionNumber}" value = "${letter}" />
-                         ${letter}:${currentQuestion.answers[letter]}
+                        <input  type = "checkbox" name = "question_${questionNumber}" value = "${letter}" />
+                         <div class = "latter"><span>${letter} :</span> ${currentQuestion.answers[letter]}</div>
                     </label>`
                   );
                }
@@ -77,25 +134,49 @@
             const answerContainers = quizContainer.querySelectorAll(".answers");
             let numCorrect = 0;
 
-            myQuestions.forEach((currentQuestion, questionNumber) => {
+            myQuestions.forEach((currentQuestion, questionNumber, question) => {
+               //    console.log(
+               //       "question",
+               //       currentQuestion.answers[currentQuestion.correctAnswer]
+               //    );
+               //    console.log("questionNumber", questionNumber);
+               //    console.log("currentQuestion", currentQuestion);
+
                //find Ansewer
                const answerContainer = answerContainers[questionNumber];
 
-               console.log("container", answerContainer);
                const selector = `input[name="question_${questionNumber}"]:checked`;
-               console.log("selector", selector);
+
                const userAnswer = (
                   answerContainer.querySelector(selector) || {}
                ).value;
 
-               console.log(userAnswer);
                if (userAnswer === currentQuestion.correctAnswer) {
                   numCorrect++;
-                  answerContainers[questionNumber].style.color = "green";
+                  answerContainers[questionNumber].style.color = "#00ff0d";
+                  //   currentQuestion.answers[
+                  //      currentQuestion.correctAnswer
+                  //   ].style.color = "green";
+                  //   Object.keys(currentQuestion.answers).map((key) => {
+                  //      console.log(currentQuestion.answers[key]);
+                  //      console.log(
+                  //         "correctAnswer",
+                  //         currentQuestion.correctAnswer
+                  //      );
+                  //      currentQuestion.answers[key] !==
+                  //      currentQuestion.correctAnswer
+                  //         ? (currentQuestion.answers[
+                  //              currentQuestion.correctAnswer
+                  //           ].style.color = "red")
+                  //         : (currentQuestion.answers[
+                  //              currentQuestion.correctAnswer
+                  //           ].style.color = "green");
+                  //   });
                } else {
                   answerContainers[questionNumber].style.color = "red";
                }
             });
+
             resultContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
          }
 
