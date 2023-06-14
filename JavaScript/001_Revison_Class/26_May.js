@@ -1,75 +1,74 @@
-// // creting a Promise
+//Creating a promise
+const promiseOne = new Promise(function (resolve, reject) {
+   // Do sn async task
+   // DB call, Crypto
+   setTimeout(function () {
+      console.log("Async task is complete");
+      resolve();
+   }, 1000);
+});
 
-// const promiseOne = new Promise(function name(resolve, reject) {
-//    //Do an async task
-//    // DB call, crypto
+//Consuming a promise
 
-//    setTimeout(function () {
-//       console.log("Complete");
-//    }, 1000);
-// });
+promiseOne.then(function () {
+   console.log("Promise consumned");
+});
 
-// // Consuming Promise
+new Promise(function (resolve, reject) {
+   setTimeout(function () {
+      console.log("Async task 2");
+   }, 1000);
+   resolve();
+}).then(function () {
+   console.log("promise Cnsumed: 2");
+});
 
-// promiseOne.then(function () {
-//    console.log("Promise Consumed");
-// });
+const promiseThree = new Promise(function (resolve, reject) {
+   setTimeout(function () {
+      //DB call to get all users from database
+      resolve({ username: "Vishal", email: "d@pw.live" });
+   }, 1000);
+});
 
-// new Promise(function (resolve, reject) {
-//    setInterval(function () {
-//       console.log("Task-2");
-//       resolve();
-//    }, 2000);
-// }).then(function () {
-//    console.log("Consume-2");
-// });
+promiseThree.then(function (user) {
+   console.log(user);
+});
 
-// const promiseThree = new Promise(function (resolve, reject) {
-//    setTimeout(function () {
-//       //DB call to get users from database
-//       resolve({ username: "Vishal", email: "V@gmail.com" });
-//    }, 500);
-// });
+const promiseFour = new Promise(function (resolve, reject) {
+   setTimeout(function () {
+      let error = false;
+      if (!error) {
+         resolve({ username: "Vishal", email: "ex@email.com" });
+      } else {
+         reject("ERRor: Something went wrong");
+      }
+   }, 1000);
+});
 
-// promiseThree.then(function (user) {
-//    console.log(user);
-// });
-
-// const promiseFour = new Promise(function (resolve, reject) {
-//    setTimeout(function () {
-//       let error = true;
-//       if (!error) {
-//          resolve({ username: "Vishal" });
-//       } else {
-//          reject("ERROR: Somthing went wrong");
-//       }
-//    }, 500);
-// });
-
-// promiseFour
-//    .then(function (user) {
-//       console.log(user);
-//       return user.username;
-//    })
-//    .then((name) => {
-//       console.log(name);
-//    })
-//    .catch(function (error) {
-//       console.log(error);
-//    })
-//    .finally(() => {
-//       "Resolve or rejected";
-//    });
+promiseFour
+   .then(function (user) {
+      console.log(user);
+      return user.username;
+   })
+   .then((name) => {
+      console.log(name);
+   })
+   .catch(function (error) {
+      console.log(error);
+   })
+   .finally(function () {
+      console.log("The Promise id either resolve or rejected");
+   });
 
 const promiseFive = new Promise(function (resolve, reject) {
    setTimeout(function () {
       let error = false;
       if (!error) {
-         resolve({ username: "Vishal" });
+         resolve({ username: "Vishal", email: "ex@email.com" });
       } else {
-         reject("ERROR: Somthing went wrong");
+         reject("ERRor: Something went wrong");
       }
-   }, 500);
+   }, 1000);
 });
 
 async function consumePromiseFive() {
@@ -87,6 +86,13 @@ async function getAllUsers() {
 
 getAllUsers();
 
-fetch("https://jsonplaceholder.typicode.com/users").then(function (response) {
-   return response.json();
-});
+// fetch("https://jsonplaceholder.typicode.com/users")
+//    .then(function (response) {
+//       return response.json();
+//    })
+//    .then((data) => {
+//       console.log(data);
+//    })
+//    .catch((error) => {
+//       console.log(error);
+//    });
