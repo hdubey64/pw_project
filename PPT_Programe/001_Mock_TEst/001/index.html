@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <style>
+         .static-position {
+            position: static;
+            border: 1px Solid red;
+         }
+         .fixed-position {
+            position: fixed;
+            top: 210px;
+            left: 100px;
+            border: 1px Solid red;
+         }
+         .sticky-position {
+            position: sticky;
+            top: 10px;
+            left: 50px;
+            border: 1px Solid red;
+         }
+         .relative-position {
+            position: relative;
+            left: 50px;
+            top: 20px;
+            border: 1px Solid red;
+         }
+         .absolute-position {
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            border: 1px Solid red;
+         }
+      </style>
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- Static Position -->
+      <section>
+         <div>
+            <h1>Static Position:-</h1>
+            <p>
+               The static position is the default position for all HTML
+               elements. In the static position, elements follow the normal flow
+               of the document.
+            </p>
+         </div>
+         <div class="static-position">This is a static positioned element.</div>
+      </section>
+
+      <!-- Fixed Position -->
+      <section>
+         <h1>Fixed Position:-</h1>
+         <p>
+            The fixed position keeps the element in a fixed position relative to
+            the browser window. It remains in the same position even if the page
+            is scrolled.
+         </p>
+         <div class="fixed-position">This is a fixed positioned element.</div>
+      </section>
+
+      <!-- Sticky Position -->
+      <section>
+         <h1>Sticky Position:-</h1>
+         <p>
+            The sticky position is a mix of both the relative and fixed
+            positions. It starts as a normal element, but when the user scrolls
+            to a specific threshold, it becomes fixed.
+         </p>
+         <div class="sticky-position">This is a sticky positioned element.</div>
+      </section>
+
+      <!-- Relative Position -->
+      <section>
+         <h1>Relative Position:-</h1>
+         <p>
+            The relative position moves the element relative to its normal
+            position without affecting the layout of other elements. It allows
+            you to position an element based on its original position.
+         </p>
+         <div class="relative-position">
+            This is a relatively positioned element.
+         </div>
+      </section>
+
+      <!-- Absolute Position -->
+      <section>
+         <h1>Absolute Position:-</h1>
+         <p>
+            The absolute position removes the element from the normal flow of
+            the document and positions it relative to its closest positioned
+            ancestor (if any) or to the initial containing block.
+         </p>
+         <div class="absolute-position">
+            This is an absolutely positioned element.
+         </div>
+      </section>
+   </body>
+</html>
