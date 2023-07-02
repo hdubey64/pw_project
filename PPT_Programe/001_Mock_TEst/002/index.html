@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <style>
+         section {
+            padding: 40px;
+            display: grid;
+            place-items: center;
+         }
+         form {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            /* border: 1px Solid black; */
+            padding: 40px;
+            background-color: #e6e6e6;
+            border-radius: 10px;
+         }
+         input {
+            border: none;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px 0;
+         }
+         .color {
+            padding: 0 10px;
+         }
+      </style>
+      <title>
+         Create a form with basic validation (name, email, phone number,
+         password, age, gender, date, color picker)
+      </title>
+   </head>
+   <body>
+      <section>
+         <form id="myForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+
+            <label for="age">Age:</label>
+            <input
+               type="number"
+               id="age"
+               name="age"
+               min="0"
+               max="150"
+               required
+            />
+
+            <div>
+               <label>Gender:</label>
+               <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  required
+               />
+               <label for="male">Male</label>
+               <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="female"
+                  required
+               />
+               <label for="female">Female</label>
+            </div>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="color">Color:</label>
+            <input
+               type="color"
+               class="color"
+               id="color"
+               name="color"
+               required
+            />
+
+            <input type="submit" value="Submit" />
+         </form>
+
+         <script>
+            function validateForm() {
+               // Basic validation example
+               var name = document.getElementById("name").value;
+               var email = document.getElementById("email").value;
+               var phone = document.getElementById("phone").value;
+               var password = document.getElementById("password").value;
+               var age = document.getElementById("age").value;
+
+               if (
+                  name === "" ||
+                  email === "" ||
+                  phone === "" ||
+                  password === "" ||
+                  age === ""
+               ) {
+                  alert("Please fill in all the required fields.");
+                  return false;
+               }
+
+               // Additional validation logic can be added based on your requirements
+
+               return true;
+            }
+         </script>
+      </section>
+   </body>
+</html>
