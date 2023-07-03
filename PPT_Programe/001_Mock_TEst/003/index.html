@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <style>
+         body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+         section {
+            padding: 20px;
+            background-color: #333;
+         }
+         section h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-align: center;
+         }
+         section > p {
+            font-size: 1.5rem;
+            color: #e3e3e3;
+            font-weight: bold;
+            text-align: justify;
+         }
+         .article {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+         }
+         .article > div {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+         }
+         .article2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+         }
+         .article2 > div {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+         }
+         h2 {
+            text-align: center;
+         }
+         p {
+            text-align: justify;
+            padding: 0 10px;
+         }
+      </style>
+      <title>Explain what is execution context in detail with diagram</title>
+   </head>
+   <body>
+      <section>
+         <h1>Execution Context :-</h1>
+         <p>
+            Execution context is a runtime environment in JS, which executes JS
+            code. It stores variables, functions, objects and other runtime
+            details. Each function call or code block has its own execution
+            context.
+         </p>
+         <main>
+            <div class="article">
+               <div>
+                  <h2>Variable Object: -</h2>
+                  <p>
+                     Variable Object is creating for each function or code block
+                     in execution context. Variable object stores variables and
+                     their value.
+                  </p>
+               </div>
+               <div>
+                  <h2>Scope Chain: -</h2>
+                  <p>
+                     Each function or code block holds its own reference to the
+                     outer scope or lexical scope. The scope chain allows access
+                     to them.
+                  </p>
+               </div>
+               <div>
+                  <h2>this Value: -</h2>
+                  <p>
+                     The “this” keyword refers to the context in which a
+                     function is executed. The value of this is determined
+                     dynamically each time function is called, based on how the
+                     function is invoked. It allows access to the object on
+                     which a method is called or the context in which a function
+                     is executed
+                  </p>
+               </div>
+               <div>
+                  <h2>Outer Environment: -</h2>
+                  <p>
+                     The execution context consists of the outer environment
+                     (the parent scope), which may be the global scope or the
+                     scope of an enclosing function.
+                  </p>
+               </div>
+            </div>
+         </main>
+      </section>
+      <section>
+         <main>
+            <h1>Type of Execution Context: -</h1>
+            <div class="article2">
+               <div>
+                  <h2>1. Global Execution context: -</h2>
+                  <p>
+                     The global execution context is the starting point of any
+                     programming. It is a bigger execution context than any
+                     other. The global execution context is created when JS code
+                     execution starts. It stores functions with global scope and
+                     globally accessible.
+                  </p>
+               </div>
+               <div>
+                  <h2>2. Function Execution context: -</h2>
+                  <p>
+                     The function execution context is responsible for the
+                     function code execution. It stores the local variables of
+                     the function, the function parameters and the internal
+                     function of the function. Calling a function creates a
+                     function execution context.
+                  </p>
+               </div>
+            </div>
+         </main>
+      </section>
+   </body>
+</html>
