@@ -1,0 +1,159 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --blackColor: #231c16;
+   --textColor: #241c15;
+   --textHoverColor: #148692;
+   --yellowButtonColor: #ffe01b;
+}
+
+header {
+   background-color: var(--blackColor);
+   color: white;
+   text-align: center;
+   /* padding: 1px; */
+   padding: 8px 0 1px 0;
+   font-size: 0.9rem;
+   position: sticky;
+   top: 0;
+}
+header > p > span {
+   text-decoration-line: underline;
+   text-decoration-style: dotted;
+   padding-bottom: 50px;
+   text-underline-offset: 0.4em;
+}
+
+nav {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   position: fixed;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+   padding: 20px;
+}
+
+.links ul {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+   list-style: none;
+}
+.links ul li {
+   color: var(--textColor);
+   font-weight: 600;
+   /* border: 1px solid red;*/
+}
+.links ul li:hover {
+   color: var(--textHoverColor);
+   text-decoration-line: underline;
+}
+
+.navRight {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   list-style: none;
+}
+
+.contact {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+.contact a:first-child {
+   text-align: right;
+   text-decoration: none;
+   color: var(--textColor);
+   line-height: 15px;
+   font-weight: 700;
+   font-size: 0.9rem;
+}
+.contact a {
+   color: var(--textColor);
+}
+.contact a:hover {
+   color: var(--textHoverColor);
+   text-decoration-line: underline;
+}
+button {
+   padding: 10px 28px;
+   border-radius: 25px;
+   font-size: 0.9rem;
+   transition: all 300ms ease-in-out;
+}
+button:hover {
+   border-bottom: 8px solid var(--blackColor);
+}
+.signup {
+   background-color: var(--yellowButtonColor);
+}
+section {
+   padding: 60px 0;
+}
+main {
+   display: flex;
+}
+.heroLeft p {
+   font-size: 0.8rem;
+   margin-bottom: -10px;
+   font-weight: 600;
+}
+.heroLeft h1 {
+   font-size: 3rem;
+   font-family: Means Web, Georgia, Times, Times New Roman, serif;
+   font-weight: 600;
+}
+.heroLeft {
+   padding: 60px;
+   margin: auto;
+}
+.heroLeft p:nth-child(3) {
+   font-size: 1.6rem;
+}
+.heroRight {
+   padding: 20px;
+   padding-right: 0;
+}
+
+.heroRight img {
+   width: 760px;
+   height: 600px;
+}
+
+footer {
+   padding: 10px 5px;
+   display: grid;
+   grid-template-columns: 4fr 1fr;
+   gap: 30px;
+   background-color: var(--blackColor);
+   color: white;
+   position: sticky;
+   bottom: 0%;
+}
+footer > div {
+   margin: auto;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   font-size: 1.5rem;
+}
+footer p {
+   font-size: 0.8rem;
+   width: 80%;
+}
+footer > div > button {
+   border-radius: 0;
+   display: block;
+   padding: 7px 40px;
+   font-size: 0.9rem;
+   background-color: var(--blackColor);
+   color: white;
+   border: 1px solid white;
+}
