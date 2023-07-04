@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="Description" content="Enter your description here" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      />
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <title>
+         Implement a CSS grid layout to display a gallery of images in a grid
+         format for design refer the image shown below, replace the empty boxed
+         with actual images
+      </title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+         main {
+            padding: 20px;
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            gap: 20px;
+            border: 1px solid red;
+         }
+         .box {
+            background: black;
+         }
+         .box1 {
+            background-image: url(https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg);
+            background-position: center;
+            background-size: contain;
+            object-fit: contain;
+            grid-row-start: 1;
+            grid-row-end: 5;
+         }
+         .box2 {
+            background-image: url(https://cdn.pixabay.com/photo/2017/06/02/18/24/watermelon-2367029_640.jpg);
+            background-position: center;
+            background-size: contain;
+            object-fit: contain;
+            grid-row-start: 1;
+            grid-row-end: 5;
+         }
+         .box3 {
+            background-image: url(https://cdn.pixabay.com/photo/2016/05/24/13/29/olive-oil-1412361_640.jpg);
+            background-position: center;
+            background-size: contain;
+            object-fit: contain;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+         }
+         .box4 {
+            background-image: url(https://cdn.pixabay.com/photo/2017/09/16/19/21/salad-2756467_640.jpg);
+            background-position: center;
+            background-size: contain;
+            object-fit: contain;
+            grid-row-start: 4;
+            grid-row-end: 7;
+         }
+         .box5 {
+            background-image: url(https://cdn.pixabay.com/photo/2017/07/28/14/29/macarons-2548827_640.jpg);
+            background-position: center;
+            background-size: contain;
+            object-fit: contain;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: 10;
+         }
+         .box6 {
+            background-image: url(https://cdn.pixabay.com/photo/2014/06/16/23/10/spices-370114_640.jpg);
+            background-position: center;
+            background-size: contain;
+            object-fit: contain;
+            grid-row-start: 7;
+            grid-row-end: 10;
+         }
+      </style>
+   </head>
+   <body>
+      <main>
+         <div class="box box1"></div>
+         <div class="box box2"></div>
+         <div class="box box3"></div>
+         <div class="box box4"></div>
+         <div class="box box5"></div>
+         <div class="box box6"></div>
+         <!-- <img
+               src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg"
+               alt=""
+            />
+            <img
+               src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg"
+               alt=""
+            />
+            <img
+               src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg"
+               alt=""
+            />
+            <img
+               src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg"
+               alt=""
+            />
+            <img
+               src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg"
+               alt=""
+            />
+            <img
+               src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg"
+               alt=""
+            /> -->
+      </main>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+   </body>
+</html>
