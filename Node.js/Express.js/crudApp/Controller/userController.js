@@ -73,7 +73,7 @@ exports.deleteUser = async (req, res) => {
 exports.editUser = async (req, res) => {
    try {
       const userID = req.params.id;
-      const user = await User.findByIdAndUpdate(userID);
+      const user = await User.findByIdAndUpdate(userID, { ...req.body });
 
       user.modifiedCount
          ? res
