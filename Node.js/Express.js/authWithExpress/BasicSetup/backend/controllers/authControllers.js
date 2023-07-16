@@ -102,8 +102,31 @@ const getUser = async (req, res) => {
    }
 };
 
+//User logout generate new cookie set it null for logut
+const logout = async (req, res) => {
+   try {
+      // Generatting new cookie
+      const cookieOption = {
+         maxAge: Date.now(),
+         httpOnly: true,
+      };
+      res.cookie("token", null, cookieOption); // Setting cookie null for logout
+      res.status(200).json({
+         success: true,
+         message: "Logged out successfully",
+      });
+   } catch (e) {
+      console.log(e);
+      res.status(400).json({
+         success: false,
+         message: e.message,
+      });
+   }
+};
+
 module.exports = {
    signup,
    signIn,
    getUser,
+   logout,
 };
