@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const JWT = require("jsonwebtoken");
 
+const bcrypt = require("bcrypt");
+
 const userSchema = new Schema(
    {
       name: {
@@ -32,6 +34,17 @@ const userSchema = new Schema(
       timestamps: true,
    }
 );
+
+//Password Encryption code
+userSchema.pre("save", async function (next) {
+   // If password is not modified go to next()
+   if (!this.isModified("password")) {
+      return next;
+   }
+   //If password is modified using bycrypt
+   this.password = await bcrypt.hash(this.password, 10);
+   return next();
+});
 
 userSchema.methods = {
    jwtToken() {
