@@ -10,6 +10,8 @@ connectToDB();
 
 // Enable parsing of JSON data in the request body
 app.use(express.json());
+
+// Use the defined routes
 app.use("/", router);
 
 module.exports = app;
