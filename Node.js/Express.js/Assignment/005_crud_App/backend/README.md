@@ -4,19 +4,27 @@
 
 ### User Registration
 
-`Endpoint`: 
-<br>  POST /register 
-
+`Endpoint`:  POST /register 
 <br>
 
-`Description`:
-<br>  Register a new user account.
-`Request` Body:
+`Description`: Register a new user account.
+<br>
+
+# Request Body:
+<br>
+
 `name`: String (required) - The name of the user.
+<br>
+
 `email`: String (required) - The email address of the user.
+<br>
+
 `password`: String (required) - The password for the user account.
 
 # `Response`:
+
+<br>
+
 `Success`: HTTP 200 OK with a success message.
  {"message": "Hello! Shashank, now you can login"}
 
@@ -26,12 +34,23 @@
 ### User Login
 
 `Endpoint`: POST /login
+<br>
 `Description`: Authenticate a user and generate an access token.
+<br>
+
 `Request Body`:
+<br>
+
 `email`: String (required) - The email address of the user.
+<br>
+
 `password`: String (required) - The password for the user account.
+<br>
+
 
 # `Response`:
+<br>
+
 `Success`: HTTP 200 OK with success message.
 {"message": "User login in succesfully"}
 
