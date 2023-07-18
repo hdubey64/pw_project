@@ -1,28 +1,31 @@
 const userModel = require("../models/userSchema");
 const emailValidator = require("email-validator");
+const bcrypt = require("bcrypt");
 
 const userRegistration = async (req, res) => {
-   const { name, email, password, confirmPassword } = req.body;
-
-   if (!name || !email || !password || !confirmPassword) {
-      return res.status(400).json({
-         success: false,
-         message: "All input fields are required",
-      });
-   }
-   const validEmail = emailValidator.validate(email);
-   if (password !== confirmPassword) {
-      return res.status(400).json({
-         success: false,
-         message: "Passwords and Confirmpassword did not match",
-      });
-   }
-   if (!validEmail) {
-      return res
-         .status(400)
-         .json({ success: false, message: "Please enter a valid email" });
-   }
    try {
+      const { name, email, password, confirmPassword } = req.body;
+
+      if (!name || !email || !password || !confirmPassword) {
+         return res.status(400).json({
+            success: false,
+            message: "All input fields are required",
+         });
+      }
+      const validEmail = emailValidator.validate(email);
+
+      if (password !== confirmPassword) {
+         return res.status(400).json({
+            success: false,
+            message: "Passwords and Confirmpassword did not match",
+         });
+      }
+      if (!validEmail) {
+         return res
+            .status(400)
+            .json({ success: false, message: "Please enter a valid email" });
+      }
+
       const userInfo = userModel(req.body);
       const result = await userInfo.save();
       console.log(result);
@@ -30,6 +33,7 @@ const userRegistration = async (req, res) => {
       return res.status(200).json({
          success: true,
          data: result,
+         message: `Hello! ${result.name}, now you can login`,
       });
    } catch (e) {
       console.log(e);
@@ -57,7 +61,10 @@ const userLogin = async (req, res) => {
             success: false,
             message: "No account associate with this email",
          });
-      } else if (password !== user.password) {
+      }
+
+      const passwordCheck = await bcrypt.compare(password, user.password);
+      if (!passwordCheck) {
          return res
             .status(400)
             .json({ success: false, message: "Password is wrong" });

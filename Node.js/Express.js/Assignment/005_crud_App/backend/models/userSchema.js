@@ -37,13 +37,18 @@ const userSchema = new mongoose.Schema(
 
 //For Password encryption
 userSchema.pre("save", async function (next) {
-   //if password is not modified goto next
-   if (!this.isModified("password")) {
+   try {
+      //if password is not modified goto next
+      if (!this.isModified("password")) {
+         return next();
+      }
+      //if password is modified encrypt and goto next
+      this.password = bcrypt.hash(this.password, 10);
       return next();
+   } catch (e) {
+      console.log(e);
+      return e;
    }
-   //if password is modified encrypt and goto next
-   this.password = await bcrypt.hash(this.password, 10);
-   return next();
 });
 
 // Define the user model using Mongoose
