@@ -4,7 +4,8 @@
 
 ### User Registration
 
-`Endpoint`: POST /register
+`Endpoint`: 
+POST /register
 `Description`: Register a new user account.
 `Request` Body:
 `name`: String (required) - The name of the user.
