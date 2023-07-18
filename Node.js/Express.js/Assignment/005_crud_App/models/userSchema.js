@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 /**
  * Define the user schema using Mongoose.
@@ -33,6 +34,17 @@ const userSchema = new mongoose.Schema(
       timestamps: true,
    }
 );
+
+//For Password encryption
+userSchema.pre("save", async function (next) {
+   //if password is not modified goto next
+   if (!this.isModified("password")) {
+      return next();
+   }
+   //if password is modified encrypt and goto next
+   this.password = await bcrypt.hash(this.password, 10);
+   return next();
+});
 
 // Define the user model using Mongoose
 // The model will be named "User" and will use the provided userSchema
