@@ -26,6 +26,7 @@
 <br>
 
 `Success`: HTTP 200 OK with a success message.
+<br>
  {"message": "Hello! Shashank, now you can login"}
 
 `Error`: HTTP error status with an error message.
@@ -52,6 +53,7 @@
 <br>
 
 `Success`: HTTP 200 OK with success message.
+<br>
 {"message": "User login in succesfully"}
 
 `Error`: HTTP error status with an error message.
