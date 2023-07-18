@@ -6,6 +6,9 @@
 
 `Endpoint`: 
 <br>  POST /register 
+
+<br>
+
 `Description`:
 <br>  Register a new user account.
 `Request` Body:
