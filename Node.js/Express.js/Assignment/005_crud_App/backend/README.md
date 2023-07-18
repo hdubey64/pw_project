@@ -7,7 +7,7 @@
 `Endpoint`: 
 <br>  POST /register 
 `Description`:
-<br> Register a new user account.
+<br>  Register a new user account.
 `Request` Body:
 `name`: String (required) - The name of the user.
 `email`: String (required) - The email address of the user.
