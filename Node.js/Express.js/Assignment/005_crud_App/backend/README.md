@@ -5,8 +5,9 @@
 ### User Registration
 
 `Endpoint`: 
-<br>  POST /register returns
-`Description`: Register a new user account.
+<br>  POST /register 
+`Description`:
+<br> Register a new user account.
 `Request` Body:
 `name`: String (required) - The name of the user.
 `email`: String (required) - The email address of the user.
