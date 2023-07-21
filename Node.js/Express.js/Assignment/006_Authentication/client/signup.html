@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="Description" content="Enter your description here" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         rel="stylesheet"
+      />
+
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="icon" href="data:," />
+
+      <title>Signup Page</title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+         }
+         section {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: rgb(227, 227, 227);
+         }
+         main {
+            background-color: #fff;
+            border: none;
+            display: grid;
+            place-items: center;
+            padding: 80px 45px;
+            border-radius: 10px;
+         }
+         main h1 {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            margin-bottom: 60px;
+         }
+         input {
+            display: block !important;
+            width: 450px;
+         }
+         form > div {
+            display: grid;
+            margin: 10px auto;
+         }
+
+         form label {
+            font-weight: 600;
+         }
+         .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #3897f0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+         }
+      </style>
+   </head>
+   <body>
+      <section>
+         <main>
+            <h1>Instagram SignUp</h1>
+            <form id="form">
+               <div>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required />
+               </div>
+
+               <div>
+                  <label for="userName">Username</label>
+                  <input type="text" id="userName" name="userName" required />
+               </div>
+
+               <div>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+               </div>
+
+               <div>
+                  <label for="password">Password</label>
+                  <input
+                     type="password"
+                     id="password"
+                     name="password"
+                     required
+                  />
+               </div>
+
+               <div>
+                  <label for="bio">Bio</label>
+                  <textarea id="bio" name="bio" rows="1" cols="53"></textarea>
+               </div>
+               <div>
+                  <button
+                     id="submit"
+                     type="button"
+                     onclick="handleRegister()"
+                     class="btn"
+                  >
+                     SignUp
+                  </button>
+               </div>
+            </form>
+            <div class="links">
+               <a href="#">Forgot Password?</a>
+               <a href="./Login.html">Log In</a>
+            </div>
+         </main>
+      </section>
+
+      <script>
+         // const formSubmit = document.getElementById("form");
+
+         // formSubmit.addEventListener("submit", );
+
+         const handleRegister = () => {
+            const name = document.getElementById("name").value;
+            const userName = document.getElementById("userName").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const bio = document.getElementById("bio").value;
+
+            if (!name || !userName || !email || !password || !bio) {
+               alert("All fields are required");
+            } else {
+               alert("Successfully registered, now you can login");
+            }
+            const user = {
+               name,
+               userName,
+               email,
+               password,
+               bio,
+            };
+
+            ragisterUser(user);
+            console.log(user);
+         };
+
+         const ragisterUser = async (payload) => {
+            try {
+               const resp = await fetch(
+                  "http://localhost:5001/api/instagram/signup",
+                  {
+                     method: "POST",
+                     headers: { "content-type": "application/JSON " },
+                     body: JSON.stringify(payload),
+                  }
+               );
+               const data = await resp.json();
+               console.log(data);
+               window.location.href =
+                  "http://localhost:5501/Node.js/Express.js/Assignment/006_Authentication/client/signup.html";
+            } catch (error) {
+               console.log(error);
+               console.log(error.message);
+            }
+         };
+      </script>
+   </body>
+</html>
