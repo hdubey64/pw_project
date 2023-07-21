@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="Description" content="Enter your description here" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         rel="stylesheet"
+      />
+
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <title>Signup Page</title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+         }
+         section {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: rgb(227, 227, 227);
+         }
+         main {
+            background-color: #fff;
+            border: none;
+            display: grid;
+            place-items: center;
+            padding: 80px 45px;
+            border-radius: 10px;
+         }
+         main h1 {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            margin-bottom: 60px;
+         }
+         input {
+            /* padding-right: 240px; */
+            display: block !important;
+
+            width: 450px;
+         }
+
+         form > div {
+            display: grid;
+            margin: 10px auto;
+         }
+
+         form label {
+            font-weight: 600;
+         }
+      </style>
+   </head>
+   <body>
+      <section>
+         <main>
+            <h1>Instagram Login</h1>
+            <form id=" form">
+               <div>
+                  <label for="userName">Username</label>
+                  <input type="text" id="userName" name="userName" required />
+               </div>
+
+               <div>
+                  <label for="password">Password</label>
+                  <input
+                     type="password"
+                     id="password"
+                     name="password"
+                     required
+                  />
+               </div>
+
+               <div>
+                  <button
+                     id="submit"
+                     type="button"
+                     onclick="login();"
+                     class="btn"
+                  >
+                     login
+                  </button>
+               </div>
+            </form>
+            <div class="links">
+               <a href="#">Forgot Password?</a>
+               <a href="./Login.html">Log In</a>
+            </div>
+         </main>
+      </section>
+
+      <script>
+         // const formSubmit = document.getElementById("submit");
+
+         // formSubmit.addEventListener("click", () => {
+
+         // });
+         const login = () => {
+            const userName = document.getElementById("userName").value;
+            const password = document.getElementById("password").value;
+
+            if (!userName || !password) {
+               alert("All fields are required");
+            }
+            const user = {
+               userName,
+               password,
+            };
+
+            loginUser(user);
+         };
+
+         const loginUser = async (payload) => {
+            try {
+               const resp = await fetch(
+                  "http://localhost:5001/api/instagram/login",
+                  {
+                     method: "POST",
+                     credentials: "include",
+                     redirect: "follow",
+                     headers: { "content-type": "application/json " },
+                     body: JSON.stringify(payload),
+                  }
+               );
+               const data = await resp.json();
+               console.log(data);
+               window.location.href =
+                  "http://localhost:5501/Node.js/Express.js/Assignment/006_Authentication/client/index.html";
+            } catch (error) {
+               console.log(error.message);
+            }
+         };
+      </script>
+   </body>
+</html>
