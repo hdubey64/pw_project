@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="Description" content="Enter your description here" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         rel="stylesheet"
+      />
+
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <title>Signup Page</title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+         }
+         section {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: rgb(227, 227, 227);
+         }
+         main {
+            min-width: 35%;
+            background-color: #fff;
+            border: none;
+            display: grid;
+            place-items: center;
+            padding: 80px 45px;
+            border-radius: 10px;
+         }
+         main h1 {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            margin-bottom: 60px;
+         }
+         main img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            object-fit: cover;
+         }
+      </style>
+   </head>
+   <body>
+      <section>
+         <main>
+            <img
+               src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
+               alt="Profile Image"
+               class="profile-image"
+            />
+            <h2 id="userName" class="username">John Doe</h2>
+            <p id="bio" class="bio">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p id="email" class="follower-count">Email: getting</p>
+            <p class="follower-count">Followers: 1000</p>
+         </main>
+      </section>
+
+      <script>
+         const userData = async () => {
+            try {
+               const resp = await fetch(
+                  "http://localhost:5001/api/instagram/",
+                  {
+                     method: "GET",
+                     credentials: "include",
+                  }
+               );
+
+               if (resp.status !== 200) {
+                  window.location.href =
+                     "http://localhost:5501/Node.js/Express.js/Assignment/006_Authentication/client/login.html";
+               }
+
+               const { data } = await resp.json();
+               const userName = document.getElementById("userName");
+               const email = document.getElementById("email");
+               const bio = document.getElementById("bio");
+               userName.innerText = data.userName;
+               console.log(data.userName);
+               email.innerText = data.email;
+               bio.innerText = data.bio;
+               console.log("data", data);
+            } catch (error) {
+               console.log(error.message);
+               window.location.href =
+                  "http://localhost:5501/Node.js/Express.js/Assignment/006_Authentication/client/login.html";
+            }
+         };
+         userData();
+      </script>
+   </body>
+</html>
