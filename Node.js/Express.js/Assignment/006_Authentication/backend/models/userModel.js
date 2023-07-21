@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+const JWT = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
-const userSchema = new mongoose.Schema({
+const userModel = new mongoose.Schema({
    name: {
       type: "string",
       required: [true, "Name is required"],
@@ -30,4 +32,27 @@ const userSchema = new mongoose.Schema({
    },
 });
 
-module.exports = mongoose.model("User", userSchema);
+userModel.pre("save", async function (next) {
+   // If password is not modified go to next()
+   if (!this.isModified("password")) {
+      return next;
+   }
+   //If password is modified using bycrypt
+   this.password = await bcrypt.hash(this.password, 10);
+   return next();
+});
+
+userModel.methods = {
+   jwtToken() {
+      return JWT.sign(
+         {
+            id: this._id,
+            userName: this.userName,
+         },
+         process.env.SECRET,
+         { expiresIn: "24h" }
+      );
+   },
+};
+
+module.exports = mongoose.model("User", userModel);

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const app = require("./app.js");
 
 const PORT = process.env.PORT || 5000;
@@ -6,5 +7,4 @@ const MONGO_URL =
 
 app.listen(PORT, () => {
    console.log(`Server listening on  localhost: ${PORT}`);
-   return `Server listening on  localhost: ${PORT}`;
 });
