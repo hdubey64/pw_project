@@ -83,9 +83,5 @@ User passwords are securely hashed using the bcrypt library before storing them 
 
 JWT tokens are used for authentication and are set as HTTP-only cookies to enhance security.
 
-`Contributing`
-Feel free to contribute to this project by opening issues or submitting pull requests.
 
-`License`
-This project is licensed under the MIT License.
 
