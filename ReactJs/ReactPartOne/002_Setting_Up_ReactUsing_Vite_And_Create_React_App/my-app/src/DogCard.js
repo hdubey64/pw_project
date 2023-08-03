@@ -1,19 +1,16 @@
-const Image = () => {
-   return (
-      <div>
-         <img src="https://img.freepik.com/free-photo/isolated-happy-smiling-dog-white-background-portrait-4_1562-693.jpg" />
-         <img src="https://img.freepik.com/free-photo/isolated-happy-smiling-dog-white-background-portrait-4_1562-693.jpg" />{" "}
-         <img src="https://img.freepik.com/free-photo/isolated-happy-smiling-dog-white-background-portrait-4_1562-693.jpg" />
-      </div>
-   );
-};
+import Image from "./Images";
+import Name from "./Name";
 
-const DogCard = () => {
+const DogCard = (props) => {
+   let title = "This is a Dog card.";
    return (
       <div>
-         <h3>Tommy</h3>
-         <Image />
-         <Image />
+         <h2 style={{ fontSize: "40px", color: "cyan" }}>{title}</h2>
+         <Name>
+            {" "}
+            <h3>{props.name}</h3>
+         </Name>
+         <Image src={props.img} />
       </div>
    );
 };
