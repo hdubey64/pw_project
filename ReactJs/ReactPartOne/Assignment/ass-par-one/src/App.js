@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Person from "./Components/Person";
+import Button from "./Components/Button";
+import Header from "./Components/Header";
+import List from "./Components/List/indes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const handleButtonClick = () => {
+      return alert("Button Clicked");
+   };
+   return (
+      <div className="App">
+         <Header title="HEADER" />
+         <Person name="Vishal" age="27" />
+         <Button text="Click me" onClick={handleButtonClick} />
+         <List items={["Shirts", "Jeans", "Perfume"]} />
+      </div>
+   );
 }
 
 export default App;
