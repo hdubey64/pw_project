@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 let z = 0;
-const Counter = () => {
+const Counter = ({ title }) => {
    const [x, setX] = useState(0);
    const [y, setY] = useState(0);
 
@@ -9,6 +9,7 @@ const Counter = () => {
    // }, [y]);
    return (
       <div>
+         <h1>{title}</h1>
          count: {z}
          <button onClick={() => (z += 1)}>Icreament</button>
          <br />
