@@ -1,0 +1,16 @@
+.pokemonWrapper {
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   background-color: rgb(33, 32, 32);
+   color: rgb(255, 255, 255);
+   font-size: 2rem;
+   font-weight: 800;
+   letter-spacing: 5px;
+   width: 300px;
+}
+.image {
+   width: 200px;
+   height: 100px;
+}
