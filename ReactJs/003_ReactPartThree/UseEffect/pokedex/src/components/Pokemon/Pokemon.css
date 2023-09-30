@@ -2,15 +2,23 @@
    border-radius: 15px;
    display: flex;
    flex-direction: column;
-   gap: 20px;
-   background-color: rgb(33, 32, 32);
+   align-items: center;
    color: rgb(255, 255, 255);
    font-size: 2rem;
    font-weight: 800;
    letter-spacing: 5px;
-   width: 300px;
+   padding: 10px 15px;
+}
+.pokemonWrapper:hover {
+   background-color: #0073ff8d;
+   box-shadow: 0px 0px 1rem 5px rgba(57, 57, 57, 0.91),
+      /* inset 0px 0px 1rem 10px rgb(0, 0, 0), */ inset 0px 0px 10px 10px
+         rgba(22, 22, 22, 0.774);
+   /* transform: perspective(100px) scale3d(0.8, 0.5, 0.1) translateZ(50px); */
+   /* padding: 40px; */
 }
 .image {
+   margin-top: 20px;
    width: 200px;
    height: 100px;
 }
