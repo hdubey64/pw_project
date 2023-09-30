@@ -1,9 +1,21 @@
+.wrapper h1 {
+   display: grid;
+   place-items: center;
+   color: rgb(255, 255, 255);
+   font-size: 3.5rem;
+   font-weight: 800;
+   margin-top: 20px;
+   text-decoration: underline;
+   text-underline-offset: 20px;
+   letter-spacing: 20px;
+   text-decoration-color: rgb(0, 0, 0);
+}
 .pokemonListWrapper {
    margin-top: 3rem;
    display: flex;
    align-items: center;
    justify-content: space-between;
    flex-wrap: wrap;
-   gap: 40px;
+   gap: 10px;
    /* width: 100%; */
 }
