@@ -4,21 +4,18 @@
    flex-direction: column;
    align-items: center;
    color: rgb(255, 255, 255);
-   font-size: 2rem;
    font-weight: 800;
    letter-spacing: 5px;
-   padding: 10px 15px;
+   padding: 10px;
+   width: 150px;
 }
 .pokemonWrapper:hover {
    background-color: #0073ff8d;
-   box-shadow: 0px 0px 1rem 5px rgba(57, 57, 57, 0.91),
-      /* inset 0px 0px 1rem 10px rgb(0, 0, 0), */ inset 0px 0px 10px 10px
-         rgba(22, 22, 22, 0.774);
-   /* transform: perspective(100px) scale3d(0.8, 0.5, 0.1) translateZ(50px); */
-   /* padding: 40px; */
+   box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset,
+      rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 .image {
-   margin-top: 20px;
-   width: 200px;
-   height: 100px;
+   margin-top: 10px;
+   width: 100px;
+   height: 75px;
 }
