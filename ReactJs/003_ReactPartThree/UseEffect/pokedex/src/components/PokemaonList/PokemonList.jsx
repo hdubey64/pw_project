@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+
 import "./PokemonList.css";
 import Pokenmon from "../Pokemon/Pokemon";
 
@@ -61,7 +62,12 @@ const PokemonList = () => {
             {isLoading
                ? "Loading......."
                : pokemonList.map((p) => (
-                    <Pokenmon key={p.id} name={p.name} image={p.image} />
+                    <Pokenmon
+                       key={p.id}
+                       id={p.id}
+                       name={p.name}
+                       image={p.image}
+                    />
                  ))}
          </div>
          <div className="control">
