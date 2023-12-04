@@ -1,9 +1,15 @@
 .searchWrapper {
-   width: 500px;
+   width: 600px;
 }
 
 #pkemonNameSearch {
    width: 100%;
    padding: 20px;
+   background-color: rgb(198, 198, 198);
    border-radius: 10px;
+}
+
+#pkemonNameSearch::placeholder {
+   text-align: center;
+   font-size: 1.2rem;
 }

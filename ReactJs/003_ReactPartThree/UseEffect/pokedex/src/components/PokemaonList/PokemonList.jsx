@@ -57,7 +57,7 @@ const PokemonList = () => {
 
    return (
       <div className="wrapper">
-         <h1> Pokemon List</h1>
+         <h1>Pokemon List</h1>
          <div className="pokemonListWrapper">
             {isLoading
                ? "Loading......."

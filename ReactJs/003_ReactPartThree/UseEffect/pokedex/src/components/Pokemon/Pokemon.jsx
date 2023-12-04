@@ -5,8 +5,8 @@ const Pokemon = ({ name, image, id }) => {
    return (
       <div className="pokemonWrapper">
          <Link to={`pokemon/${id}`}>
-            <div>{name.toUpperCase()}</div>
-            <div>
+            <div className="name">{name.toUpperCase()}</div>
+            <div className="pokemonImg">
                <img className="image" src={image} alt="" />
             </div>
          </Link>
