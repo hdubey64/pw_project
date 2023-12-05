@@ -1,16 +1,14 @@
-import PokemonList from "../PokemaonList/PokemonList"
-import Search from "../Search/Search"
-import "./Pokedex.css"
-
+import PokemonList from "../PokemaonList/PokemonList";
+import Search from "../Search/Search";
+import "./Pokedex.css";
 
 const Pokedex = () => {
-    return (
-        <div className="pokedexWraper"><h1 className="headTag">Pokedex</h1>
-            <Search />
-            <PokemonList />
-        </div>
+   return (
+      <div className="pokedexWraper">
+         <Search />
+         <PokemonList />
+      </div>
+   );
+};
 
-    )
-}
-
-export default Pokedex
+export default Pokedex;

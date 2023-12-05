@@ -5,6 +5,7 @@ import CustomRoutes from "./routes/CustomRoutes";
 function App() {
    return (
       <>
+         <h1 className="headTag">Pokedex</h1>
          <CustomRoutes />
       </>
    );

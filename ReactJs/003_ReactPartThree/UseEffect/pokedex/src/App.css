@@ -40,3 +40,14 @@
 .read-the-docs {
    color: #888;
 } */
+.headTag {
+   letter-spacing: 5px;
+   color: black;
+   text-decoration: underline;
+   text-underline-offset: 15px;
+   text-decoration-color: white;
+   color: white;
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
