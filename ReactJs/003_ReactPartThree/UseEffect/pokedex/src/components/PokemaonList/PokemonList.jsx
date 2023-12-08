@@ -4,6 +4,8 @@ import axios from "axios";
 import "./PokemonList.css";
 import Pokenmon from "../Pokemon/Pokemon";
 
+// Branch Update
+
 const PokemonList = () => {
    const [pokemonList, setPokemonList] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
