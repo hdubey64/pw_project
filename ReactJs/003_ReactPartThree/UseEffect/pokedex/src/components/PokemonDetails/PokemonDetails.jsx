@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-function PokemonDetails() {
+function PokemonDetails({ pokemonName }) {
    const { id } = useParams();
 
    const [pokemon, setPokemon] = useState({});
@@ -13,16 +13,28 @@ function PokemonDetails() {
    };
 
    async function downloadPokemon() {
-      const response = await axios.get(
-         `https://pokeapi.co/api/v2/pokemon/${id}`
-      );
-      setPokemon({
-         name: capitalizeFirstLetter(response.data.name),
-         image: response.data.sprites.other.dream_world.front_default,
-         weight: response.data.weight,
-         height: response.data.height,
-         types: response.data.types.map((t) => t.type.name),
-      });
+      try {
+         if (pokemonName) {
+            response = await axios.get(
+               `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+            );
+         } else {
+            response = await axios.get(
+               `https://pokeapi.co/api/v2/pokemon/${id}`
+            );
+         }
+
+         setPokemon({
+            name: capitalizeFirstLetter(response.data.name),
+            image: response.data.sprites.other.dream_world.front_default,
+            weight: response.data.weight,
+            height: response.data.height,
+            types: response.data.types.map((t) => t.type.name),
+         });
+      } catch (error) {
+         console.log("Something went wrong");
+      }
+      let response;
    }
 
    useEffect(() => {
