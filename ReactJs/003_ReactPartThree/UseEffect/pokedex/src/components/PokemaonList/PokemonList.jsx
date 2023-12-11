@@ -97,7 +97,7 @@ const PokemonList = () => {
             <button
                disabled={pokemonListState.prevUrl == null}
                onClick={() => {
-                  let urlToSet = pokemonListState.nextUrl;
+                  let urlToSet = pokemonListState.prevUrl;
                   setPokemonListState({
                      ...pokemonListState,
                      pokedexUrl: urlToSet,
