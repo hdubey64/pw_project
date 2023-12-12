@@ -14,6 +14,7 @@ function PokemonDetails({ pokemonName }) {
 
    async function downloadPokemon() {
       try {
+         let response;
          if (pokemonName) {
             response = await axios.get(
                `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
@@ -33,8 +34,8 @@ function PokemonDetails({ pokemonName }) {
          });
       } catch (error) {
          console.log("Something went wrong");
+         console.log(error);
       }
-      let response;
    }
 
    useEffect(() => {
